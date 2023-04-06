@@ -7,10 +7,15 @@
 # Criteria A: Planning
 
 ## Problem Definition
-As a student at my school, I have noticed that there is no dedicated social network for book enthusiasts for our school community. My friends and I have expressed a desire for a platform where we can connect with other students who share our love of books, share recommendations, and discuss our favorite books (see <a href="https://github.com/jonathanye29/unit4_project#evidence-of-consultation">Evidence of Consultation</a> in Appendix). Existing social media platforms such as Google Goodreads are great for readers to connect worldwide, however, it does not provide a focused space for book enthusiasts specifically within my school community. I believe that a dedicated social network for book lovers for specifically my school community would create a great space for students to connect, provide recommendations, and have discussions.
+As a student at my school (School X), I have noticed that there is no dedicated social network for book enthusiasts for my school community. My friends and I have expressed a desire for a platform where we can connect with other students who share our love of books, share recommendations, and discuss our favorite books (see <a href="https://github.com/jonathanye29/unit4_project#evidence-of-consultation">Evidence of Consultation</a> in Appendix). Existing social media platforms such as Google Goodreads are great for readers to connect worldwide, however, it does not provide a focused space for book enthusiasts specifically within School X's community. I believe that a dedicated social network for book lovers for specifically my school community would create a great space for students to connect, provide recommendations, and have discussions.
 
 ## Success Criteria
-1. 
+1.  The social network allows only students from School X to register with their school emails.
+2.  Users should be able to share posts of different categories such as: Announcements, Recommendations, Questions, Discussions, and Rants.
+3.  Users should be able to share book reviews.
+4.  Users should be able to comment under other users posts and book reviews.
+5.  Users should be able to edit or delete their posts, book reviews, or comments.
+6.  The application will display all posts in a feed on the main page of the online platform.
 
 ## Design Statement
 I aim to design and develop a social network website specifically for my school. It is a platform that will allow readers to discuss, share, and review different books and topics. The website will be developed using Python, HTML, CSS, and Flask. It will take approximately 3 weeks to develop and will be evaluated based on the given criteria.
