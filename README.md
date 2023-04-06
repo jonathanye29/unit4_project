@@ -9,10 +9,14 @@
 ## Problem Definition
 As a student at my school, I have noticed that there is no dedicated social network for book enthusiasts for our school community. My friends and I have expressed a desire for a platform where we can connect with other students who share our love of books, share recommendations, and discuss our favorite books (see <a href="https://github.com/jonathanye29/unit4_project#evidence-of-consultation">Evidence of Consultation</a> in Appendix). Existing social media platforms such as Google Goodreads are great for readers to connect worldwide, however, it does not provide a focused space for book enthusiasts specifically within my school community. I believe that a dedicated social network for book lovers for specifically my school community would create a great space for students to connect, provide recommendations, and have discussions.
 
-### Design Statement
-Design statement: I will to design and make a ———— for a client who is ———. The ——– will about ———— and is constructed using the software ———. It will take ———- to make and will be evaluated according to the criteria ———.
-### Rationale for Proposed Solution
-### Success Criteria
+## Success Criteria
+1. 
+
+## Design Statement
+I aim to design and develop a social network website specifically for my school. It is a platform that will allow readers to discuss, share, and review different books and topics. The website will be developed using Python, HTML, CSS, and Flask. It will take approximately 3 weeks to develop and will be evaluated based on the given criteria.
+
+## Rationale for Proposed Solution
+
 
 # Criteria B: Design
 ## System Diagram
