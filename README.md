@@ -23,6 +23,7 @@ I aim to design and develop a social network website specifically for my school.
 ## Wireframe
 ## Flow Diagram
 ## ER Diagram
+![unit4projectERdiagram](https://user-images.githubusercontent.com/111751273/230443855-24cf0e27-4a52-4fa6-9c02-bf2a6a22673c.jpg)
 ## UML Diagram
 ## Test plan
 ## Record of Tasks
