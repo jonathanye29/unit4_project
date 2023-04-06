@@ -2,7 +2,7 @@
 # ShelfShare: A Book Sharing Social Network
 <img src="https://user-images.githubusercontent.com/111751273/230335373-2b5f43b8-14be-4786-aeac-73b739196a62.jpg" width="100%">
 
-<i>Fig. 1</i> Using the prompt 'Generate a picture of a cozy reading nook with a bookshelf filled with books and a comfortable armchair in warm and inviting colors.' This image was generated using AI on Deep Dream Generator. [1]
+<i>Fig. 1</i> Using the prompt 'Generate a picture of a cozy reading nook with a bookshelf filled with books and a comfortable armchair in warm and inviting colors.' This image was generated using AI on Deep Dream Generator.[4]
 
 # Criteria A: Planning
 
@@ -32,8 +32,11 @@ Design statement: I will to design and make a ———— for a client who is �
 
 
 # Works cited
-1. “Trending Dreams | Deep Dream Generator.” Deepdreamgenerator.com, 2023, deepdreamgenerator.com/. Accessed 6 Apr. 2023.
-2. 
+1. “HTML Tutorial.” W3schools.com, 2023, www.w3schools.com/html/default.asp. Accessed 2 Apr. 2023.
+2. “Flask.” Fullstackpython.com, 2016, www.fullstackpython.com/flask.html. Accessed 3 Apr. 2023.
+3. Grinberg, Miguel. “The Flask Mega-Tutorial Part I: Hello, World!” Miguelgrinberg.com, 2017, blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world. Accessed 3 Apr. 2023.
+4. “Trending Dreams | Deep Dream Generator.” Deepdreamgenerator.com, 2023, deepdreamgenerator.com/. Accessed 6 Apr. 2023.
+
 
 # Appendix
 
