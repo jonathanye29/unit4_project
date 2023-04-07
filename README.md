@@ -29,7 +29,7 @@ I will develop this social network website using Python, HTML, CSS, SQLite, and 
 ## Flow Diagram
 ## ER Diagram
 ![u4projectERdiagram](https://user-images.githubusercontent.com/111751273/230445149-14e32559-9299-4315-9ded-ff4e93d05c85.jpg)
-
+<i>Fig. /i> Entity-Relationship (ER) diagram for ShelfShare's network database, illustrating the relationships between the Users, Posts, Reviews, and Comments tables. The diagram displays one-to-many relationships using lines starting with '1' and ending with 'N', indicating the cardinality of each relationship. For example, 1 user can have many (n) posts.
 
 <img width="max" alt="Screen Shot 2023-04-07 at 9 29 08 PM" src="https://user-images.githubusercontent.com/111751273/230608928-1915bb1c-8f24-48cd-8241-b3e5be2a96ca.png">
 
