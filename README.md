@@ -1,8 +1,7 @@
-
 # ShelfShare: A Book Sharing Social Network
 <img src="https://user-images.githubusercontent.com/111751273/230335373-2b5f43b8-14be-4786-aeac-73b739196a62.jpg" width="100%">
 
-<i>Fig. 1</i> Using the prompt 'Generate a picture of a cozy reading nook with a bookshelf filled with books and a comfortable armchair in warm and inviting colors.' This image was generated using AI on Deep Dream Generator.[4]
+<i>Fig. 1</i> Using the prompt 'Generate a picture of a cozy reading nook with a bookshelf filled with books and a comfortable armchair in warm and inviting colors.' This image was generated using AI on Deep Dream Generator.[3]
 
 # Criteria A: Planning
 
@@ -18,9 +17,10 @@ As a student at my school (School X), I have noticed that there is no dedicated 
 6.  The application will display all posts in a feed on the main page of the online platform.
 
 ## Design Statement
-I aim to design and develop a social network website specifically for my school. It is a platform that will allow readers to discuss, share, and review different books and topics. The website will be developed using Python, HTML, CSS, and Flask. It will take approximately 3 weeks to develop and will be evaluated based on the given criteria.
+I aim to design and develop a social network website specifically for my school. It is a platform that will allow readers to discuss, share, and review different books and topics. It will take approximately 3 weeks to develop and will be evaluated based on the given criteria.
 
 ## Rationale for Proposed Solution
+I will develop this social network website using Python, HTML, CSS, SQLite, and Flask. I decided to use Python because it is the most popular and widely used programming language and it is also among the fastest-growing programming languages in the tech industry [4]. As a result of its widespread use, the program is easier for many developers to understand than languages like C or Javascript. This will benefit the social network being programmed in Python because it will make it simple for upcoming programmers to comprehend the code and further advance its development. Flask, a lightweight web framework, is often used with Python to build scalable and customizable web applications [5]. Flask is typically used for developing small to medium sized web applications, which is a great fit for the social network I am developing for my school. [5]. 
 
 
 # Criteria B: Design
@@ -29,6 +29,20 @@ I aim to design and develop a social network website specifically for my school.
 ## Flow Diagram
 ## ER Diagram
 ![u4projectERdiagram](https://user-images.githubusercontent.com/111751273/230445149-14e32559-9299-4315-9ded-ff4e93d05c85.jpg)
+
+
+<img width="max" alt="Screen Shot 2023-04-07 at 8 59 53 PM" src="https://user-images.githubusercontent.com/111751273/230605243-8ce6c8e0-a024-4132-bb53-65eb3095112c.png">
+<i>Fig. </i> Example Data in Users Table (Note: All information is fake and does not represent real individuals or their personal information)
+
+<img width="max" alt="Screen Shot 2023-04-07 at 9 10 20 PM" src="https://user-images.githubusercontent.com/111751273/230606554-7c016020-7a22-4ba7-b11d-862e262b2134.png">
+<i>Fig. </i> Example Data in Posts Table (Note: All information is fake and does not represent real posts or their authors)
+
+<img width="max" alt="Screen Shot 2023-04-07 at 9 03 01 PM" src="https://user-images.githubusercontent.com/111751273/230605567-a75cfa74-ee01-4ac6-a090-a040d25faebc.png">
+<Fig. </i> Example Data in Reviews Table (Note: All information is fake and does not represent real reviews or their authors)
+
+<img width="max" alt="Screen Shot 2023-04-07 at 9 10 59 PM" src="https://user-images.githubusercontent.com/111751273/230606594-c59c810b-9263-49a7-94f0-3ffbefc2482b.png">
+<i>Fig. </i> Example Data in Comments Table (Note: All information is fake and does not represent real comments or their authors)
+
 ## UML Diagram
 ## Test plan
 ## Record of Tasks
@@ -43,9 +57,10 @@ I aim to design and develop a social network website specifically for my school.
 
 # Works cited
 1. “HTML Tutorial.” W3schools.com, 2023, www.w3schools.com/html/default.asp. Accessed 2 Apr. 2023.
-2. “Flask.” Fullstackpython.com, 2016, www.fullstackpython.com/flask.html. Accessed 3 Apr. 2023.
-3. Grinberg, Miguel. “The Flask Mega-Tutorial Part I: Hello, World!” Miguelgrinberg.com, 2017, blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world. Accessed 3 Apr. 2023.
-4. “Trending Dreams | Deep Dream Generator.” Deepdreamgenerator.com, 2023, deepdreamgenerator.com/. Accessed 6 Apr. 2023.
+2. Grinberg, Miguel. “The Flask Mega-Tutorial Part I: Hello, World!” Miguelgrinberg.com, 2017, blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world. Accessed 3 Apr. 2023.
+3. “Trending Dreams | Deep Dream Generator.” Deepdreamgenerator.com, 2023, deepdreamgenerator.com/. Accessed 6 Apr. 2023.
+4. Sanyal, Sayantani. 10 Reasons Why Python Is One Of The Best Programming Languages. Accessed 7 Apr. 2023
+5. “Flask.” Fullstackpython.com, 2016, www.fullstackpython.com/flask.html. Accessed 7 Apr. 2023.
 
 
 # Appendix
