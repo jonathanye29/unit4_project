@@ -31,17 +31,29 @@ I will develop this social network website using Python, HTML, CSS, SQLite, and 
 ![u4projectERdiagram](https://user-images.githubusercontent.com/111751273/230445149-14e32559-9299-4315-9ded-ff4e93d05c85.jpg)
 
 
-<img width="max" alt="Screen Shot 2023-04-07 at 8 59 53 PM" src="https://user-images.githubusercontent.com/111751273/230605243-8ce6c8e0-a024-4132-bb53-65eb3095112c.png">
-<i>Fig. </i> Example Data in Users Table (Note: All information is fake and does not represent real individuals or their personal information)
+<img width="max" alt="Screen Shot 2023-04-07 at 9 29 08 PM" src="https://user-images.githubusercontent.com/111751273/230608928-1915bb1c-8f24-48cd-8241-b3e5be2a96ca.png">
 
-<img width="max" alt="Screen Shot 2023-04-07 at 9 10 20 PM" src="https://user-images.githubusercontent.com/111751273/230606554-7c016020-7a22-4ba7-b11d-862e262b2134.png">
-<i>Fig. </i> Example Data in Posts Table (Note: All information is fake and does not represent real posts or their authors)
+<p align="center">
+  <i>Fig. </i> Example Data in Users Table (Note: All information is fake and does not represent real individuals or their personal information)
+</p>
 
-<img width="max" alt="Screen Shot 2023-04-07 at 9 03 01 PM" src="https://user-images.githubusercontent.com/111751273/230605567-a75cfa74-ee01-4ac6-a090-a040d25faebc.png">
-<Fig. </i> Example Data in Reviews Table (Note: All information is fake and does not represent real reviews or their authors)
+<img width="max" alt="Screen Shot 2023-04-07 at 9 28 29 PM" src="https://user-images.githubusercontent.com/111751273/230608878-771dffd3-547a-4f55-9873-fd01c84caaae.png">
 
-<img width="max" alt="Screen Shot 2023-04-07 at 9 10 59 PM" src="https://user-images.githubusercontent.com/111751273/230606594-c59c810b-9263-49a7-94f0-3ffbefc2482b.png">
-<i>Fig. </i> Example Data in Comments Table (Note: All information is fake and does not represent real comments or their authors)
+<p align="center">
+  <i>Fig. </i> Example Data in Posts Table (Note: All information is fake and does not represent real posts or their authors)
+</p>
+
+<img width="max" alt="Screen Shot 2023-04-07 at 9 29 29 PM" src="https://user-images.githubusercontent.com/111751273/230608970-0458ea2a-c1e5-49e7-91f8-b46e0da26267.png">
+
+<p align="center">
+  <i>Fig. </i> Example Data in Reviews Table (Note: All information is fake and does not represent real reviews or their authors)
+</p>
+ 
+<img width="max" alt="Screen Shot 2023-04-07 at 9 29 45 PM" src="https://user-images.githubusercontent.com/111751273/230608999-5e2bdd27-2d98-4099-9478-aab25af60ec6.png">
+
+<p align="center">
+  <i>Fig. </i> Example Data in Comments Table (Note: All information is fake and does not represent real comments or their authors)
+</p>
 
 ## UML Diagram
 ## Test plan
