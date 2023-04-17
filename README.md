@@ -6,18 +6,20 @@
 # Criteria A: Planning
 
 ## Problem Definition
-As a student at my school (School X), I have noticed that there is no dedicated social network for book enthusiasts for my school community. My friends and I have expressed a desire for a platform where we can connect with other students who share our love of books, share recommendations, and discuss our favorite books (see <a href="https://github.com/jonathanye29/unit4_project#evidence-of-consultation">Evidence of Consultation</a> in Appendix). Existing social media platforms such as Google Goodreads are great for readers to connect worldwide, however, it does not provide a focused space for book enthusiasts specifically within School X's community. I believe that a dedicated social network for book lovers for specifically my school community would create a great space for students to connect, provide recommendations, and have discussions.
+As a member of School X's book club, I have noticed a lack of a dedicated social network for our book club community. While existing platforms such as Goodreads allow readers to connect worldwide, they do not provide a focused space for book club members within our school community to connect, share book reviews and recommendations, opinions/comments, discussions, and even post about special events such as book fairs and meeting reminders. Through consultations with fellow book club members (see <a href="https://github.com/jonathanye29/unit4_project#evidence-of-consultation">Evidence of Consultation</a> in Appendix), it has become clear that a dedicated social network for book enthusiasts within our school community would be highly beneficial. Further, communication and sharing of book club events and discussions are scattered across multiple platforms such as Messenger, Facebook, and Email. This lack of a centralized platform makes it difficult to keep track of book club events, discussions, and announcements in one place. As such, there is a clear need for a dedicated social network for book club members at School X that would bring together all the necessary features in one place and provide a seamless experience for our book club community to connect and engage with each other.
+
 
 ## Success Criteria
-1.  The social network allows only students from School X to register with their school emails.
-2.  Users should be able to share posts of different categories such as: Announcements, Recommendations, Questions, Discussions, and Rants.
+1.  The platform allows only students from School X to register using their school emails.
+2.  Users should be able to share posts of different categories such as: Announcements, Reminders, Book Recommendations, and Discussions.
 3.  Users should be able to share book reviews.
-4.  Users should be able to comment under other users posts and book reviews.
+4.  Users should be able to comment under other users' posts and book reviews.
 5.  Users should be able to edit or delete their posts, book reviews, or comments.
-6.  The application will display all posts in a feed on the main page of the online platform.
+6.  The platform will allow the user to select what kind of posts they would like to view.
 
 ## Design Statement
-I aim to design and develop a social network website specifically for my school. It is a platform that will allow readers to discuss, share, and review different books and topics. It will take approximately 3 weeks to develop and will be evaluated based on the given criteria.
+I will design and develop a website for my school’s book club. This website will be developed using Python, HTML, CSS, SQLite, and the Flask framework. It will take approximately 3 weeks to develop and will be evaluated based on the given criteria.
+
 
 ## Rationale for Proposed Solution
 I will develop this social network website using Python, HTML, CSS, SQLite, and Flask. I decided to use Python because it is the most popular and widely used programming language and it is also among the fastest-growing programming languages in the tech industry [4]. As a result of its widespread use, the program is easier for many developers to understand than languages like C or Javascript. This will benefit the social network being programmed in Python because it will make it simple for upcoming programmers to comprehend the code and further advance its development. Flask, a lightweight web framework, is often used with Python to build scalable and customizable web applications [5]. Flask is typically used for developing small to medium sized web applications, which is a great fit for the social network I am developing for my school. [5]. 
