@@ -1,0 +1,32 @@
+{%  extends "base.html" %}
+
+{% block content %}
+<div class="col-md-9" style="padding-left: 10px">
+    <h2>Announcement Posts</h2>
+    {% for post in posts %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h3 class="card-title mb-1">{{ post[1] }}</h3>
+                <h5 class="card-subtitle mb-2 text-muted">[{{ post[2] }}]</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Post by: {{ post[-1] }}</h6>
+                <h6 class="card-subtitle mb-2 text-muted">Post date: {{ post[4]|parse_date }}</h6>
+                <hr>
+                <p class="card-text">{{ post[3] }}</p>
+            </div>
+        {% if post[5] != 'None' %}
+            <img src="/file/{{ post[5] }}" class="img-fluid" alt="Responsive image" style="height: auto; width: 400px;">
+        {% endif %}
+            <a href="{{ url_for('view_post', post_id=post[0]) }}" class="btn btn-primary btn-light">Read More</a>
+        </div>
+    {% endfor %}
+    {% if posts|length == 0 %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h3 class="card-title mb-1">No announcements</h3>
+            </div>
+        </div>
+    {% endif %}
+</div>
+
+{% endblock %}
+
