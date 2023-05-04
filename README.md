@@ -6,23 +6,26 @@
 # Criteria A: Planning
 
 ## Problem Definition
-As a member of School X's book club, I have noticed a lack of a dedicated social network for our book club community. While existing platforms such as Goodreads allow readers to connect worldwide, they do not provide a focused space for book club members within our school community to connect, share book reviews and recommendations, opinions/comments, discussions, and even post about special events such as book fairs and meeting reminders. Through consultations with fellow book club members (see <a href="https://github.com/jonathanye29/unit4_project#evidence-of-consultation">Evidence of Consultation</a> in Appendix), it has become clear that a dedicated social network for book enthusiasts within our school community would be highly beneficial. Further, communication and sharing of book club events and discussions are scattered across multiple platforms such as Messenger, Facebook, and Email. This lack of a centralized platform makes it difficult to keep track of book club events, discussions, and announcements in one place. As such, there is a clear need for a dedicated social network for book club members at School X that would bring together all the necessary features in one place and provide a seamless experience for our book club community to connect and engage with each other.
+As a member of School X's book club, I have noticed a lack of a dedicated social network for our book club community. While existing platforms such as Goodreads allow readers to connect worldwide, they do not provide a focused space for book club members within our school community to connect, share book reviews and recommendations, opinions/comments, discussions, and even post about special events such as book fairs and meeting reminders. Further, Goodreads doesn’t allow users to upload any image they wish, and users are also not able to edit/delete their posts or comments if they make a mistake. Through consultations with fellow book club members (see <a href="https://github.com/jonathanye29/unit4_project#evidence-of-consultation">Evidence of Consultation</a> in Appendix), it has become clear that a dedicated social network for book enthusiasts within our school community would be highly beneficial. Further, communication and sharing of book club events and discussions are scattered across multiple platforms such as Messenger, Facebook, and Email. This lack of a centralized platform makes it difficult to keep track of book club events, discussions, and announcements in one place. Further, finding different post categories is hard because there are so many types.
 
 
 ## Success Criteria
-1.  The platform allows only students from School X to register using their school emails.
-2.  Users should be able to share posts of different categories such as: Announcements, Reminders, Book Recommendations, and Discussions.
-3.  Users should be able to share book reviews.
-4.  Users should be able to comment under other users' posts and book reviews.
-5.  Users should be able to edit or delete their posts, book reviews, or comments.
-6.  The platform will allow the user to select what kind of posts they would like to view.
+1. [Issue tackled: “lack of a dedicated social network for our book club community”] The platform allows only students from School X to register using their school emails.
+2.  [Issue tackled: “they do not provide a focused space for book club members within our school community to connect, share book reviews and recommendations, opinions/comments, discussions, and even post about special events such as book fairs and meeting reminders”] Users should be able to post posts of different categories such as: Announcements, Reminders, Book Recommendations/Reviews, and Discussions
+3. [Issue tackled: "communication and sharing of book club events and discussions are scattered across multiple platforms."] The platform should centralize all book club events, discussions, and announcements in one location. 
+4.  [Issue tackled: “Users are also not able to edit/delete their posts or comments if they make a mistake.”] Users should be able to edit or delete their posts, book reviews, or comments.
+5.  [Issue: tackled: “finding different post categories is hard because there are so many types”] The platform will allow the user to select what kind of posts they would like to view.
+6. [Issue tackled: “doesn’t allow users to upload any image they wish”] The platform will allow users to upload any images they wish.
+
 
 ## Design Statement
 I will design and develop a website for my school’s book club. This website will be developed using Python, HTML, CSS, SQLite, and the Flask framework. It will take approximately 3 weeks to develop and will be evaluated based on the given criteria.
 
 
 ## Rationale for Proposed Solution
-I will develop this social network website using Python, HTML, CSS, SQLite, and Flask. I decided to use Python because it is the most popular and widely used programming language and it is also among the fastest-growing programming languages in the tech industry [4]. As a result of its widespread use, the program is easier for many developers to understand than languages like C or Javascript. This will benefit the social network being programmed in Python because it will make it simple for upcoming programmers to comprehend the code and further advance its development. Flask, a lightweight web framework, is often used with Python to build scalable and customizable web applications [5]. Flask is typically used for developing small to medium sized web applications, which is a great fit for the social network I am developing for my school. [5]. 
+There are two types of applications: web applications and mobile applications. Mobile applications can only be accessed through mobile devices, which limits the number of users who can access them. On the other hand, web applications can be accessed through any electronic device with a browser. Therefore, developing a web application would bring together all the necessary features in one place for the book club community to connect and engage with each other.
+
+I decided to use HTML to develop the website as it is the standard markup language for creating web pages and web applications. HTML provides a simple and accessible foundation for building the user interface of the social network. This ensures that the platform will be compatible with various devices and browsers, allowing a wide range of users to access the application.
 
 
 # Criteria B: Design
