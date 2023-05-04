@@ -11,11 +11,12 @@ As a member of School X's book club, I have noticed a lack of a dedicated social
 
 ## Success Criteria
 1. [Issue tackled: “lack of a dedicated social network for our book club community”] The platform allows only students from School X to register using their school emails.
-2.  [Issue tackled: “they do not provide a focused space for book club members within our school community to connect, share book reviews and recommendations, opinions/comments, discussions, and even post about special events such as book fairs and meeting reminders”] Users should be able to post posts of different categories such as: Announcements, Reminders, Book Recommendations/Reviews, and Discussions
-3. [Issue tackled: "communication and sharing of book club events and discussions are scattered across multiple platforms."] The platform should centralize all book club events, discussions, and announcements in one location. 
-4.  [Issue tackled: “Users are also not able to edit/delete their posts or comments if they make a mistake.”] Users should be able to edit or delete their posts, book reviews, or comments.
-5.  [Issue: tackled: “finding different post categories is hard because there are so many types”] The platform will allow the user to select what kind of posts they would like to view.
-6. [Issue tackled: “doesn’t allow users to upload any image they wish”] The platform will allow users to upload any images they wish.
+2.  [Issue tackled: “they do not provide a focused space for book club members within our school community to connect, share book reviews and recommendations, opinions/comments, discussions, and even post about special events such as book fairs and meeting reminders. Users are also not able to edit/delete their posts or comments if they make a mistake.”] 
+   - Users should be able to post posts of different categories such as: Announcements, Reminders,  Book Recommendations/Reviews, and Discussions
+4. [Issue tackled: "communication and sharing of book club events and discussions are scattered across multiple platforms."] The platform should centralize all book club events, discussions, and announcements in one location. 
+5.  [Issue tackled: ] 
+6.  [Issue: tackled: “finding different post categories is hard because there are so many types”] The platform will allow the user to select what kind of posts they would like to view.
+7. [Issue tackled: “doesn’t allow users to upload any image they wish”] The platform will allow users to upload any images they wish.
 
 
 ## Design Statement
