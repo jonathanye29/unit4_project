@@ -31,6 +31,8 @@ I decided to use HTML to develop the website as it is the standard markup langua
 # Criteria B: Design
 ## System Diagram
 ## Wireframe
+![u4wireframe](https://user-images.githubusercontent.com/111751273/236081370-7bbe2b42-1e9c-4606-bab9-5de5787219cb.png)
+
 ## Flow Diagram
 ## ER Diagram
 ![u4projectERdiagram](https://user-images.githubusercontent.com/111751273/230445149-14e32559-9299-4315-9ded-ff4e93d05c85.jpg)
