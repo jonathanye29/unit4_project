@@ -31,7 +31,7 @@ I decided to use HTML to develop the website as it is the standard markup langua
 # Criteria B: Design
 ## System Diagram
 ## Wireframe
-![u4wireframe](https://user-images.githubusercontent.com/111751273/236081370-7bbe2b42-1e9c-4606-bab9-5de5787219cb.png)
+<img width="651" alt="Screen Shot 2023-05-05 at 9 05 47 PM" src="https://user-images.githubusercontent.com/111751273/236453336-e5980aca-6663-4f40-ba87-066a4ca50ca5.png">
 
 ## Flow Diagram
 ## ER Diagram
