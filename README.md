@@ -6,16 +6,16 @@
 # Criteria A: Planning
 
 ## Problem Definition
-As a member of School X's book club, I have noticed a lack of a dedicated social network for our book club community. While existing platforms such as Goodreads allow readers to connect worldwide, they do not provide a focused space for book club members within our school community to connect, share book reviews and recommendations, opinions/comments, discussions, and even post about special events such as book fairs and meeting reminders. Further, Goodreads doesn’t allow users to upload any image they wish, and users are also not able to edit/delete their posts or comments if they make a mistake. Through consultations with fellow book club members (see <a href="https://github.com/jonathanye29/unit4_project#evidence-of-consultation">Evidence of Consultation</a> in Appendix), it has become clear that a dedicated social network for book enthusiasts within our school community would be highly beneficial. Further, communication and sharing of book club events and discussions are scattered across multiple platforms such as Messenger, Facebook, and Email. This lack of a centralized platform makes it difficult to keep track of book club events, discussions, and announcements in one place. Further, finding different post categories is hard because there are so many types.
+As a member of School X's book club, I have noticed a lack of a dedicated social network for our book club community. While existing platforms such as Goodreads allow readers to connect worldwide, they do not provide a focused space for book club members within our school community to connect, share book reviews and recommendations, opinions/comments, discussions, and even post about special events such as book fairs and meeting reminders. Users are also not able to edit/delete their posts or comments if they make a mistake. Further, Goodreads doesn’t allow users to upload images the user wishes, or even see past posts they have liked. Through consultations with fellow book club members (see <a href="https://github.com/jonathanye29/unit4_project#evidence-of-consultation">Evidence of Consultation</a> in Appendix), it has become clear that a dedicated social network for book enthusiasts within our school community would be highly beneficial. Further, communication and sharing of book club events and discussions are scattered across multiple platforms such as Messenger, Facebook, and Email. This lack of a centralized platform makes it difficult to keep track of book club events, discussions, and announcements in one place. Further, finding different post categories is hard because there are so many types.
 
 
 ## Success Criteria
 1. [Issue tackled: “lack of a dedicated social network for our book club community”] The platform allows only students from School X to register using their school emails.
-2.  [Issue tackled: “they do not provide a focused space for book club members within our school community to connect, share book reviews and recommendations, opinions/comments, discussions, and even post about special events such as book fairs and meeting reminders. Users are also not able to edit/delete their posts or comments if they make a mistake.”] Users should be able to post posts of different categories such as: Announcements, Reminders,  Book Recommendations/Reviews, and Discussion and be able to edit/delete their posts and comments
+2.  [Issue tackled: 1. “they do not provide a focused space for book club members within our school community to connect, share book reviews and recommendations, opinions/comments, discussions, and even post about special events such as book fairs and meeting reminders." 2. "users are also not able to edit/delete their posts or comments if they make a mistake”] Users should be able to post posts of different categories such as: Announcements, Reminders,  Book Recommendations/Reviews, and Discussion and be able to edit/delete their posts and comments
 4. [Issue tackled: "communication and sharing of book club events and discussions are scattered across multiple platforms."] The platform should centralize all book club events, discussions, and announcements in one location. 
-5.  [Issue tackled: ] 
+5.  [Issue tackled: "or even see past posts they have liked"] Users will be able to see all posts they have liked in the past.
 6.  [Issue: tackled: “finding different post categories is hard because there are so many types”] The platform will allow the user to select what kind of posts they would like to view by category.
-7. [Issue tackled: “doesn’t allow users to upload any image they wish”] The platform will allow users to upload any images they wish.
+7. [Issue tackled: “doesn’t allow users to upload images the user wishes”] The platform will allow users to upload images in their posts.
 
 
 ## Design Statement
@@ -33,12 +33,13 @@ I decided to use HTML to develop the website as it is the standard markup langua
 ## Wireframe
 <img width="651" alt="Screen Shot 2023-05-05 at 9 05 47 PM" src="https://user-images.githubusercontent.com/111751273/236453336-e5980aca-6663-4f40-ba87-066a4ca50ca5.png">
 
+
 ## Flow Diagram
 ## ER Diagram
 ![u4projectERdiagram](https://user-images.githubusercontent.com/111751273/230445149-14e32559-9299-4315-9ded-ff4e93d05c85.jpg)
 <i>Fig. </i> Entity-Relationship (ER) diagram for ShelfShare's network database, illustrating the relationships between the Users, Posts, Reviews, and Comments tables. The diagram displays one-to-many relationships using lines starting with '1' and ending with 'N', indicating the cardinality of each relationship. For example, 1 user can have many (n) posts.
 
-<img width="max" alt="Screen Shot 2023-04-07 at 9 29 08 PM" src="https://user-images.githubusercontent.com/111751273/230608928-1915bb1c-8f24-48cd-8241-b3e5be2a96ca.png">
+![Screen Shot 2023-05-06 at 8 33 21 PM](https://user-images.githubusercontent.com/111751273/236621562-8dc78e4f-7ff3-4a0b-bd85-2984853d328b.png)
 
 <p align="center">
   <i>Fig. </i> Example Data in Users Table (Note: All information is fake and does not represent real individuals or their personal information)
