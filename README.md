@@ -1,7 +1,7 @@
 # ShelfShare: A Book Sharing Social Network
 <img src="https://user-images.githubusercontent.com/111751273/230335373-2b5f43b8-14be-4786-aeac-73b739196a62.jpg" width="100%">
 
-<i>Fig. 1</i> Using the prompt 'Generate a picture of a cozy reading nook with a bookshelf filled with books and a comfortable armchair in warm and inviting colors.' This image was generated using AI on Deep Dream Generator.[1]
+Using the prompt 'Generate a picture of a cozy reading nook with a bookshelf filled with books and a comfortable armchair in warm and inviting colors.' This image was generated using AI on Deep Dream Generator.[1]
 
 # Criteria A: Planning
 
@@ -9,12 +9,17 @@
 As a School X book club member, I've observed the absence of a dedicated social network for our book club community. While platforms like Goodreads enable global connections, they don't offer a focused space for our school's book club to share reviews, discussions, or announcements. Users can't edit/delete posts or comments, upload desired images, or view past liked posts. Furthermore, club communication/posting is dispersed across Messenger, Facebook, and Email, making it hard for members to track and stay connected. As there are many different post categories, it is hard to locate specific posts. Consultations with club members (see <a href="https://github.com/jonathanye29/unit4_project#evidence-of-consultation">Evidence of Consultation</a> in Appendix) reveal a clear desire for a dedicated book club social network.
 
 ## Success Criteria
-1. Issue tackled: “ absence of a dedicated social network for our book club community”] The platform allows only students from School X to register using their school emails.
-2. [Issue tackled: 1. “they don't offer a focused space for our school's book club to share reviews, discussions, or event announcements" 2. "Users can't edit/delete posts or comments”] Users should be able to post posts of different categories such as: Announcements,  Book Reviews, and Discussions, and be able to edit/delete their posts and comments
-3. [Issue tackled: "club communication/posting is dispersed across Messenger, Facebook, and Email, making it hard for members to track and stay connected"] The platform should allow users to access all features of the book club in the social network. 
-4. [Issue tackled: "or even see past posts they have liked"] Users will be able to see all posts they have liked in the past.
-5. [Issue: tackled: “As there are many different post categories, it is hard to locate specific posts.”] The platform will allow the user to select what kind of posts they would like to view by category.
-6. [Issue tackled: “upload desired images”] The platform will allow users to upload images in their posts.
+1. *[Issue tackled: “ absence of a dedicated social network for our book club community”]* The platform allows only students from School X to register using their school emails.
+
+2. *[Issue tackled: 1. “they don't offer a focused space for our school's book club to share reviews, discussions, or event announcements" 2. "Users can't edit/delete posts or comments”]* Users should be able to post posts of different categories such as: Announcements,  Book Reviews, and Discussions, and be able to edit/delete their posts and comments
+
+3. *[Issue tackled: "club communication/posting is dispersed across Messenger, Facebook, and Email, making it hard for members to track and stay connected"]* The platform should allow users to access all features of the book club in the social network. 
+
+4. *[Issue tackled: "or even see past posts they have liked"]* Users will be able to see all posts they have liked in the past.
+
+5. *[Issue: tackled: “As there are many different post categories, it is hard to locate specific posts.”]* The platform will allow the user to select what kind of posts they would like to view by category.
+
+6. *[Issue tackled: “upload desired images”]* The platform will allow users to upload images in their posts.
 
 ## Design Statement
 I will design and develop a website for my school’s book club. This website will be developed using HTML, Bootstrap CSS, Python, SQLite, and the Flask framework. It will take approximately 3 weeks to develop and will be evaluated based on the given criteria.
@@ -34,9 +39,11 @@ Word Count: 499
 
 # Criteria B: Design
 ## System Diagram
+
+
 ## Wireframe
 <img width="651" alt="Screen Shot 2023-05-05 at 9 05 47 PM" src="https://user-images.githubusercontent.com/111751273/236453336-e5980aca-6663-4f40-ba87-066a4ca50ca5.png">
-
+<i>Fig. </i> The wireframe diagram displays the layout and structure of the Shelfshare social network application, including the login and registration pages, the homepage, pages for each category, the create post page, and the profile page. Users can navigate between these pages using buttons and links provided on each page. The purpose of the wireframe is to provide a visual representation of the user interface design and the flow of the application.
 
 ## Flow Diagram
 ## ER Diagram
@@ -46,25 +53,25 @@ Word Count: 499
 ![Screen Shot 2023-05-06 at 8 33 21 PM](https://user-images.githubusercontent.com/111751273/236621562-8dc78e4f-7ff3-4a0b-bd85-2984853d328b.png)
 
 <p align="center">
-  <i>Fig. </i> Example Data in Users Table (Note: All information is fake and does not represent real individuals or their personal information)
+  <i>Fig. </i> Example Data for Users Table (Disclaimer: The data presented is fictional and does not depict real comments or authors)
 </p>
 
 <img width="max" alt="Screen Shot 2023-04-07 at 9 28 29 PM" src="https://user-images.githubusercontent.com/111751273/230608878-771dffd3-547a-4f55-9873-fd01c84caaae.png">
 
 <p align="center">
-  <i>Fig. </i> Example Data in Posts Table (Note: All information is fake and does not represent real posts or their authors)
+  <i>Fig. </i> Example Data for Posts Table (Disclaimer: The data presented is fictional and does not depict real comments or authors)
 </p>
 
 <img width="max" alt="Screen Shot 2023-04-07 at 9 29 29 PM" src="https://user-images.githubusercontent.com/111751273/230608970-0458ea2a-c1e5-49e7-91f8-b46e0da26267.png">
 
 <p align="center">
-  <i>Fig. </i> Example Data in Reviews Table (Note: All information is fake and does not represent real reviews or their authors)
+  <i>Fig. </i> Example Data for Reviews Table (Disclaimer: The data presented is fictional and does not depict real comments or authors) 
 </p>
  
 <img width="max" alt="Screen Shot 2023-04-07 at 9 29 45 PM" src="https://user-images.githubusercontent.com/111751273/230608999-5e2bdd27-2d98-4099-9478-aab25af60ec6.png">
 
 <p align="center">
-  <i>Fig. </i> Example Data in Comments Table (Note: All information is fake and does not represent real comments or their authors)
+  <i>Fig. </i> Example Data for Comments Table (Disclaimer: The data presented is fictional and does not depict real comments or authors)
 </p>
 
 ## UML Diagram
