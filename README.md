@@ -74,25 +74,21 @@ The class shown in the UML Diagram is responsible for handling database interact
 <i>Fig. 7</i> Entity-Relationship (ER) diagram for ShelfShare's network database, illustrating the relationships between the Users, Posts, Likes, and Comments tables. The diagram displays one-to-many relationships using lines starting with '1' and ending with 'N', indicating the cardinality of each relationship. For example, 1 user can have many (n) posts.
 
 ![Screen Shot 2023-05-06 at 8 33 21 PM](https://user-images.githubusercontent.com/111751273/236621562-8dc78e4f-7ff3-4a0b-bd85-2984853d328b.png)
-
 <p align="center">
   <i>Fig. 8</i> Example Data for Users Table (Disclaimer: The data presented is fictional and does not depict real comments or authors)
 </p>
 
 <img width="max" alt="Screen Shot 2023-04-07 at 9 28 29 PM" src="https://user-images.githubusercontent.com/111751273/230608878-771dffd3-547a-4f55-9873-fd01c84caaae.png">
-
 <p align="center">
   <i>Fig. 9</i> Example Data for Posts Table (Disclaimer: The data presented is fictional and does not depict real comments or authors)
 </p>
 
 <img width="max" alt="Screen Shot 2023-04-07 at 9 29 29 PM" src="https://user-images.githubusercontent.com/111751273/230608970-0458ea2a-c1e5-49e7-91f8-b46e0da26267.png">
-
 <p align="center">
   <i>Fig. 10</i> Example Data for Reviews Table (Disclaimer: The data presented is fictional and does not depict real comments or authors) 
 </p>
  
-<img width="765" alt="Screen Shot 2023-05-08 at 1 03 36 AM" src="https://user-images.githubusercontent.com/111751273/236688856-0af3bdaf-72c0-47b1-9fa7-4d90f102e339.png">
-
+<img width="max" alt="Screen Shot 2023-05-08 at 1 04 41 AM" src="https://user-images.githubusercontent.com/111751273/236688904-e654f3bd-06fb-4c63-b821-47c07c4b5fb7.png">
 <p align="center">
   <i>Fig. 11</i> Example Data for Comments Table (Disclaimer: The data presented is fictional and does not depict real comments or authors)
 </p>
