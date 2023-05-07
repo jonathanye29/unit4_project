@@ -47,17 +47,19 @@ Word Count: 499
 ![u4flowchart1 (1)](https://user-images.githubusercontent.com/111751273/236664876-93241420-14ad-49cd-94b9-b869e724d9db.png)
 <i>Fig. 3</i> This is the flow diagram that details the process of how the login system works.
 
-This handles user login by checking the entered email and password, verifying the password against the stored password in the database, and creating a JWT token upon successful authentication to maintain the user's session. If the login fails, it displays error messages.
+This method handles user login by checking the entered email and password, verifying the password against the stored password in the database, and creating a JWT token upon successful authentication to maintain the user's session. If the login fails, it displays error messages.
 
 ### Create Post
 ![u4flowchart2 (1)](https://user-images.githubusercontent.com/111751273/236667550-dc0668e5-b174-4688-9e57-77e6a044b79c.png)
-
 <i>Fig. 4</i> This is the flow diagram that details the process of how the posts are created.
 
-This handles the creation of a new post. It first checks for an image in the request, safely saving it if present. Then, it extracts post details from the form, inserts the post into the database, and redirects the user to the homepage.
+This method handles the creation of a new post. It first checks for an image in the request, safely saving it if present. Then, it extracts post details from the form, inserts the post into the database, and redirects the user to the homepage.
 
-### 
+### Like Post
+![u4flowchart3](https://user-images.githubusercontent.com/111751273/236672192-9402434f-47ba-456e-90f6-de9736a568d0.png)
+<i>Fig. 5</i> This is the flow diagram that details the process of how users are able to like and unlike posts
 
+This method handles the process of liking or unliking a post. It first decodes the user's token to get their user ID. Then, it checks if a like record exists in the database for the given user and post. If the record exists, it deletes the like (unlike). If not, it creates a new like record. Finally, it redirects the user back to the post.
 
 ## UML Diagram
 
