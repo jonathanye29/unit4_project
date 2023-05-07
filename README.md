@@ -42,12 +42,15 @@ Word Count: 499
 ![jojojojojojo (1)](https://user-images.githubusercontent.com/111751273/236633366-db243c86-ccdc-41bb-a01c-a45db72f277c.png)
 <i>Fig. 2</i> This is the system diagram for the proposed solution
 
-
-## Wireframe
-<img width="651" alt="Screen Shot 2023-05-05 at 9 05 47 PM" src="https://user-images.githubusercontent.com/111751273/236453336-e5980aca-6663-4f40-ba87-066a4ca50ca5.png">
-<i>Fig. 3</i> The wireframe diagram displays the layout and structure of the Shelfshare social network application, including the login and registration pages, the homepage, pages for each category, the create post page, and the profile page. Users can navigate between these pages using buttons and links provided on each page. The purpose of the wireframe is to provide a visual representation of the user interface design and the flow of the application.
-
 ## Flow Diagram
+### Login System
+![u4flowchart1](https://user-images.githubusercontent.com/111751273/236663327-64754801-34fd-4122-8873-121f627982cc.png)
+<i>Fig. 3</i> This is the flow diagram that details the process of how the login system works.
+
+This handles user login by checking the entered email and password, verifying the password against the stored password in the database, and creating a JWT token upon successful authentication to maintain the user's session. If the login fails, it displays error messages.
+
+## UML Diagram
+
 ## ER Diagram
 ![u4projectERdiagram](https://user-images.githubusercontent.com/111751273/230445149-14e32559-9299-4315-9ded-ff4e93d05c85.jpg)
 <i>Fig. </i> Entity-Relationship (ER) diagram for ShelfShare's network database, illustrating the relationships between the Users, Posts, Reviews, and Comments tables. The diagram displays one-to-many relationships using lines starting with '1' and ending with 'N', indicating the cardinality of each relationship. For example, 1 user can have many (n) posts.
@@ -76,7 +79,11 @@ Word Count: 499
   <i>Fig. </i> Example Data for Comments Table (Disclaimer: The data presented is fictional and does not depict real comments or authors)
 </p>
 
-## UML Diagram
+
+## Wireframe
+<img width="651" alt="Screen Shot 2023-05-05 at 9 05 47 PM" src="https://user-images.githubusercontent.com/111751273/236453336-e5980aca-6663-4f40-ba87-066a4ca50ca5.png">
+<i>Fig. </i> The wireframe diagram displays the layout and structure of the Shelfshare social network application, including the login and registration pages, the homepage, pages for each category, the create post page, and the profile page. Users can navigate between these pages using buttons and links provided on each page. The purpose of the wireframe is to provide a visual representation of the user interface design and the flow of the application.
+
 ## Test plan
 ## Record of Tasks
 
