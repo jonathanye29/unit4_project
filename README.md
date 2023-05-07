@@ -131,8 +131,8 @@ The class shown in the UML Diagram is responsible for handling database interact
 4	|	"Brainstorm and write down success criterias	"	|	A clear success criteria that suits the client and resolves the problem	|	20 mins.	|	10/04/2023	|	A
 5	|	Create system diagram        	|	To have a clear idea of the hardware and software requirements for the proposed solution	|	45 minutes	|	13/04/2023	|	B
 6	|	Draw a wire frame and write an explanation of it	|	Have a clear wire frame that accurately represents and describes the application and have a brief explanation	|	30 mins.	|	13/04/2023	|	B
-7	|	Create flow diagrams and write brief explanations for each       	|	Have accurate flow diagrams for different parts of the porgram with brief explanations	|	1 hour	|	14/04/2023	|	B
-8	|	Draw an ER diagram	|	A clear and organized visual representation of the data structure for the ShelfShare network	|	45 minutes        	|	14/04/2023	|	B
+7	|	Create flow diagrams and write brief explanations for each  	|	Have accurate flow diagrams for different parts of the program with brief explanations	|	1 hour	|	14/04/2023	|	B
+8	|	Draw an ER diagram and write a breif explanation of it|	A clear and organized visual representation of the data structure for the ShelfShare network with a brief explanation	|	45 minutes        	|	14/04/2023	|	B
 9	|	Create UML Diagram and write a brief description 	|	Have a clear UML Diagram that accurately shows the different classes and methods used with a brief explanation	|	30 minutes	|	15/04/2023	|	B
 10	|	Write the test plans	|	Procedures that should be taken to test the program and the expected outcome of each test is recorded	|	1 hour	|	17/04/2023	|	B
 11	|	Follow up meeting with client	|	Present success criterias and development plan to client and get the approval	|	20 minutes	|	17/04/2023	|	A
