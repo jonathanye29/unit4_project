@@ -168,8 +168,28 @@ The class shown in the UML Diagram is responsible for handling database interact
 41	|	Cleaning up the Code	|	Going back and reviewing the code to correctly format and remove unused code 	|	1 hour 30 minutes	|	27/04/2023	|	C
 
 # Criteria C: Development
+
 ## Existing tools
+Libraries
+---------
+| Flask |
+| werkzeug.utils |
+|functools|
+| jwt |
+|dotenv |
+|os|
+|pycountry|
+|datetime|
+|SQLite3|
+|Passlib|
+
 ## List of techniques used
+- Flask Library/Routes
+- Python inside HTML
+- CSS Styling
+- For loops
+- Lists
+- 
 ## Development
 
 # Criteria D: Functionality
