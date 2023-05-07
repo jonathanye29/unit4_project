@@ -173,15 +173,15 @@ The class shown in the UML Diagram is responsible for handling database interact
 |Libraries|
 |---------|
 | Flask 
-| werkzeug.utils 
-|functools
-| jwt 
-|dotenv 
-|os
-|pycountry
-|datetime
-|SQLite3
-|Passlib
+| Werkzeug.utils 
+| Functools
+| JWT
+| Dotenv 
+| os
+| Pycountry
+| Datetime
+| SQLite3
+| Passlib
 
 ## List of techniques used
 - Flask Library/Routes
