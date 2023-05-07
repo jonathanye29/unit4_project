@@ -2,15 +2,15 @@ from flask import Flask, render_template, request, redirect, url_for, flash, ses
 from my_lib import database_worker, encrypt_password, check_password
 from werkzeug.utils import secure_filename
 from functools import wraps
-import jwt, pycountry
+import jwt, pycountry, dotenv, os
 from datetime import datetime, timedelta
-import dotenv
-import os
+
 
 
 app = Flask(__name__)
 app.secret_key = 'you-will-never-guess'
 app.config['UPLOAD_FOLDER'] = 'upload_folder'
+
 
 dotenv.load_dotenv()
 token_key = os.getenv('TOKEN_ENCRYPTION_KEY')
@@ -119,6 +119,30 @@ def create_database():
     db.run_save(query_comments)
     db.close()
 
+@app.route('/like_post/<int:post_id>', methods=['POST'])
+@token_required
+def like_post(post_id):
+    current_user = jwt.decode(session['token'], token_key, algorithms=['HS256'])
+    user_id = current_user['user_id']
+
+    db = database_worker("shelfshare.db")
+    check_like_query = f"SELECT * FROM likes WHERE user_id = {user_id} AND post_id = {post_id}"
+    like_record = db.run_fetchone(query=check_like_query)
+    print(like_record)
+
+    if like_record:
+        # If the like record exists, delete it (unlike)
+        unlike_query = f"DELETE FROM likes WHERE user_id = {user_id} AND post_id = {post_id}"
+        db.run_save(query=unlike_query)
+
+    else:
+        # If the like record doesn't exist, create it (like)
+        like_query = f"INSERT INTO likes (user_id, post_id, datetime) VALUES ('{user_id}', '{post_id}', '{datetime.now()}')"
+        db.run_save(query=like_query)
+
+    return redirect('/post/' + str(post_id))
+
+
 @app.route('/delete_comment/<int:comment_id>')
 @token_required
 def delete_comment(comment_id):
@@ -190,8 +214,9 @@ def profile():
     user = db.search(f"SELECT * FROM users WHERE id = {user_id}")
     posts = db.search(f"SELECT * FROM posts WHERE user_id = {user_id} ORDER BY posts.datetime DESC")
     comments = db.search(f"SELECT * FROM comments WHERE user_id = {user_id} ORDER BY comments.datetime DESC")
+    liked_posts = db.search(f"SELECT posts.*, likes.datetime as liked_datetime FROM likes INNER JOIN posts ON likes.post_id = posts.id WHERE likes.user_id = {user_id} ORDER BY liked_datetime DESC")
+    return render_template('profile.html', posts=posts, comments=comments, liked_posts=liked_posts, user=user[0])
 
-    return render_template('profile.html', posts=posts, comments=comments, user=user[0])
 
 @app.route('/add_comment/<int:post_id>', methods=['POST'])
 @token_required
@@ -207,11 +232,18 @@ def add_comment(post_id):
 @app.route('/post/<int:post_id>')
 @token_required
 def view_post(post_id):
+    current_user = jwt.decode(session['token'], token_key, algorithms=['HS256'])
+    user_id = current_user['user_id']
     db = database_worker("shelfshare.db")
     post = db.search(f"SELECT posts.*, users.name FROM posts INNER JOIN users ON posts.user_id = users.id WHERE posts.id = {post_id}")
     comments = db.search(f"SELECT comments.*, users.name FROM comments INNER JOIN users ON comments.user_id = users.id WHERE comments.post_id = {post_id} ORDER BY comments.datetime DESC")
+
+    # Check if the current user has liked the post
+    user_like = db.run_fetchone(f"SELECT * FROM likes WHERE post_id = {post_id} AND user_id = {current_user['user_id']}")
+    is_liked = user_like is not None
+
     if post:
-        return render_template('post.html', post=post[0], comments=comments)
+        return render_template('post.html', post=post[0], comments=comments, is_liked=is_liked)
 
     return render_template('index.html')
 
@@ -310,7 +342,7 @@ def login():
                 id, name, username, country, email, hash = user[0]
                 if check_password(user_password=password, hashed_password=hash):
                     print("Password correct.")
-                    token = jwt.encode({'user_id': id, 'exp': datetime.utcnow() + timedelta(minutes=60)}, token_key, algorithm='HS256')
+                    token = jwt.encode({'user_id': id, 'exp': datetime.utcnow() + timedelta(minutes=180)}, token_key, algorithm='HS256')
                     session['token'] = token
                     print("Token created.")
                     return redirect("/")
@@ -360,3 +392,6 @@ def register():
 def logout():
     session.pop('token', None)
     return redirect(url_for('login'))
+
+if __name__ == '__main__':
+    app.run()
