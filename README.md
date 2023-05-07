@@ -44,7 +44,7 @@ Word Count: 499
 
 ## Flow Diagram
 ### Login System
-![u4flowchart1](https://user-images.githubusercontent.com/111751273/236663327-64754801-34fd-4122-8873-121f627982cc.png)
+![u4flowchart1 (1)](https://user-images.githubusercontent.com/111751273/236664876-93241420-14ad-49cd-94b9-b869e724d9db.png)
 <i>Fig. 3</i> This is the flow diagram that details the process of how the login system works.
 
 This handles user login by checking the entered email and password, verifying the password against the stored password in the database, and creating a JWT token upon successful authentication to maintain the user's session. If the login fails, it displays error messages.
