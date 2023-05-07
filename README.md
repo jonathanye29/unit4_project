@@ -49,6 +49,15 @@ Word Count: 499
 
 This handles user login by checking the entered email and password, verifying the password against the stored password in the database, and creating a JWT token upon successful authentication to maintain the user's session. If the login fails, it displays error messages.
 
+### Create Post
+![u4flowchart2](https://user-images.githubusercontent.com/111751273/236667356-3293d5aa-a004-45f6-b47f-0aeda176e0ef.png)
+<i>Fig. 4</i> This is the flow diagram that details the process of how the posts are created.
+
+This handles the creation of a new post. It first checks for an image in the request, safely saving it if present. Then, it extracts post details from the form, inserts the post into the database, and redirects the user to the homepage.
+
+### 
+
+
 ## UML Diagram
 
 ## ER Diagram
