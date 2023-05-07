@@ -62,8 +62,8 @@ This handles the creation of a new post. It first checks for an image in the req
 ## UML Diagram
 
 ## ER Diagram
-![u4projectERdiagram](https://user-images.githubusercontent.com/111751273/230445149-14e32559-9299-4315-9ded-ff4e93d05c85.jpg)
-<i>Fig. </i> Entity-Relationship (ER) diagram for ShelfShare's network database, illustrating the relationships between the Users, Posts, Reviews, and Comments tables. The diagram displays one-to-many relationships using lines starting with '1' and ending with 'N', indicating the cardinality of each relationship. For example, 1 user can have many (n) posts.
+![u4projectERdiagram](https://user-images.githubusercontent.com/111751273/236670439-baf74194-ab1d-406b-bcd5-3dd25d37e338.png)
+<i>Fig. </i> Entity-Relationship (ER) diagram for ShelfShare's network database, illustrating the relationships between the Users, Posts, Likes, and Comments tables. The diagram displays one-to-many relationships using lines starting with '1' and ending with 'N', indicating the cardinality of each relationship. For example, 1 user can have many (n) posts.
 
 ![Screen Shot 2023-05-06 at 8 33 21 PM](https://user-images.githubusercontent.com/111751273/236621562-8dc78e4f-7ff3-4a0b-bd85-2984853d328b.png)
 
