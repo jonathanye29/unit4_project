@@ -34,7 +34,7 @@ Many tools exist for creating web applications, including JavaScript, Python, C+
 
 For the website's database, I will be using SQLite. SQLite is a free database that does not require any additional server process, and is implemented on a single file. This database fits my client's needs as it is designed to handle large amounts of data efficiently [^10]. It will be able to store all kinds of information safely and quickly, as it does not require to go through long procedural routines other databases such as IBM db2 use [^11]. SQLite is the best option for the social network as it is reliable, efficient, and cost-friendly.
 
-Word Count: 499
+_Word Count_: **491**
 
 
 # Criteria B: Design
