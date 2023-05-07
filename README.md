@@ -62,6 +62,10 @@ This method handles the creation of a new post. It first checks for an image in 
 This method handles the process of liking or unliking a post. It first decodes the user's token to get their user ID. Then, it checks if a like record exists in the database for the given user and post. If the record exists, it deletes the like (unlike). If not, it creates a new like record. Finally, it redirects the user back to the post.
 
 ## UML Diagram
+![u4UML](https://user-images.githubusercontent.com/111751273/236673274-82e87354-2d09-423a-a62d-0baaf5b2ff90.png)
+<i>Fig. 6</i> This is the UML diagram for the social network.
+
+The class shown in the UML Diagram is responsible for handling database interactions, such as executing queries, saving changes, and closing the connection.
 
 ## ER Diagram
 ![u4projectERdiagram](https://user-images.githubusercontent.com/111751273/236670439-baf74194-ab1d-406b-bcd5-3dd25d37e338.png)
@@ -97,6 +101,7 @@ This method handles the process of liking or unliking a post. It first decodes t
 <i>Fig. </i> The wireframe diagram displays the layout and structure of the Shelfshare social network application, including the login and registration pages, the homepage, pages for each category, the create post page, and the profile page. Users can navigate between these pages using buttons and links provided on each page. The purpose of the wireframe is to provide a visual representation of the user interface design and the flow of the application.
 
 ## Test plan
+
 ## Record of Tasks
 
 # Criteria C: Development
