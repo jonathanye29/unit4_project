@@ -91,7 +91,7 @@ The class shown in the UML Diagram is responsible for handling database interact
   <i>Fig. 10</i> Example Data for Reviews Table (Disclaimer: The data presented is fictional and does not depict real comments or authors) 
 </p>
  
-<img width="max" alt="Screen Shot 2023-04-07 at 9 29 45 PM" src="https://user-images.githubusercontent.com/111751273/230608999-5e2bdd27-2d98-4099-9478-aab25af60ec6.png">
+<img width="765" alt="Screen Shot 2023-05-08 at 1 03 36 AM" src="https://user-images.githubusercontent.com/111751273/236688856-0af3bdaf-72c0-47b1-9fa7-4d90f102e339.png">
 
 <p align="center">
   <i>Fig. 11</i> Example Data for Comments Table (Disclaimer: The data presented is fictional and does not depict real comments or authors)
