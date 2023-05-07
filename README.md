@@ -39,7 +39,8 @@ Word Count: 499
 
 # Criteria B: Design
 ## System Diagram
-![jojojojojojo (1)](https://user-images.githubusercontent.com/111751273/236633366-db243c86-ccdc-41bb-a01c-a45db72f277c.png)
+![jojojojojojo (2)](https://user-images.githubusercontent.com/111751273/236675657-0ace4df1-aedc-4d44-9181-fc2a45cd81cd.png)
+
 <i>Fig. 2</i> This is the system diagram for the proposed solution
 
 ## Flow Diagram
