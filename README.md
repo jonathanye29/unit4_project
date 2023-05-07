@@ -6,14 +6,14 @@ Using the prompt 'Generate a picture of a cozy reading nook with a bookshelf fil
 # Criteria A: Planning
 
 ## Problem Definition
-As a School X book club member, I've observed the absence of a dedicated social network for our book club community. While platforms like Goodreads enable global connections, they don't offer a focused space for our school's book club to share reviews, discussions, or announcements. Users can't edit/delete posts or comments, upload desired images, or view past liked posts. Furthermore, club communication/posting is dispersed across Messenger, Facebook, and Email, making it hard for members to track and stay connected. As there are many different post categories, it is hard to locate specific posts. Consultations with club members (see <a href="https://github.com/jonathanye29/unit4_project#evidence-of-consultation">Evidence of Consultation</a> in Appendix) reveal a clear desire for a dedicated book club social network.
+As a School X book club member, I've observed the absence of a dedicated social network for our book club community. While platforms like Goodreads enable global connections, they don't offer a focused space for our school's book club to share reviews, discussions, or announcements. Users can't edit/delete posts or comments, upload desired images, or view past liked posts. Additionally, discovering popular content is challenging due to the presence of numerous less-liked or disliked posts. As there are many different post categories, it is hard to locate specific posts. Consultations with club members (see <a href="https://github.com/jonathanye29/unit4_project#evidence-of-consultation">Evidence of Consultation</a> in Appendix) reveal a clear desire for a dedicated book club social network.
 
 ## Success Criteria
 1. *[Issue tackled: “ absence of a dedicated social network for our book club community”]* The platform allows only students from School X to register using their school emails.
 
 2. *[Issue tackled: 1. “they don't offer a focused space for our school's book club to share reviews, discussions, or event announcements" 2. "Users can't edit/delete posts or comments”]* Users should be able to post posts of different categories such as: Announcements,  Book Reviews, and Discussions, and be able to edit/delete their posts and comments
 
-3. *[Issue tackled: "club communication/posting is dispersed across Messenger, Facebook, and Email, making it hard for members to track and stay connected"]* The platform should allow users to access all features of the book club in the social network. 
+3. *[Issue tackled: "discovering popular content is challenging due to the presence of numerous less-liked or disliked posts."]* Implement a filtering or sorting mechanism that allows users to easily discover and view highly-liked or popular posts.
 
 4. *[Issue tackled: "or even see past posts they have liked"]* Users will be able to see all posts they have liked in the past.
 
