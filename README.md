@@ -70,7 +70,7 @@ This method handles the process of liking or unliking a post. It first decodes t
 The class shown in the UML Diagram is responsible for handling database interactions, such as executing queries, saving changes, and closing the connection.
 
 ## ER Diagram
-![u4projectERdiagram](https://user-images.githubusercontent.com/111751273/236670439-baf74194-ab1d-406b-bcd5-3dd25d37e338.png)
+![u4projectERdiagram (1)](https://user-images.githubusercontent.com/111751273/236689127-eb15d37f-0739-4bec-8e81-60c3b56a149f.png)
 <i>Fig. 7</i> Entity-Relationship (ER) diagram for ShelfShare's network database, illustrating the relationships between the Users, Posts, Likes, and Comments tables. The diagram displays one-to-many relationships using lines starting with '1' and ending with 'N', indicating the cardinality of each relationship. For example, 1 user can have many (n) posts.
 
 ![Screen Shot 2023-05-06 at 8 33 21 PM](https://user-images.githubusercontent.com/111751273/236621562-8dc78e4f-7ff3-4a0b-bd85-2984853d328b.png)
