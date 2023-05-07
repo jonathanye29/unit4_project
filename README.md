@@ -187,10 +187,27 @@ The class shown in the UML Diagram is responsible for handling database interact
 - Flask Library/Routes
 - Python inside HTML
 - CSS Styling
+- Object-Oriented Programming(OOP)
 - For loops
+- If statements
+- Variables
+- Functions
 - Lists
-- 
+- Token-based authentication
+
 ## Development
+
+### Success Criteria 1: The platform allows only students from School X to register using their school emails.
+```.py
+if '@schoolx.edu' not in email:
+    flash(("Invalid email address, not a 'School X email.", 'danger'))
+    print("Invalid email address, not a 'School X email.")
+```
+My client wanted to create a social network platform exclusively for members of School X's book club. To achieve this, I needed to ensure that only students from School X could register using their school email addresses. To solve this problem, I used a basic yet effective 'if' statement in Python to verify if the user is attempting to register with a School X email address or not as shown in the code snippet above. Further, when a user tries to register with an email thats not from School X, I made an error pop up message to remind the user that they need to register with a School X email.
+
+### 
+
+
 
 # Criteria D: Functionality
 
