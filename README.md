@@ -1,7 +1,7 @@
 # ShelfShare: A Book Sharing Social Network
 <img src="https://user-images.githubusercontent.com/111751273/230335373-2b5f43b8-14be-4786-aeac-73b739196a62.jpg" width="100%">
 
-Using the prompt 'Generate a picture of a cozy reading nook with a bookshelf filled with books and a comfortable armchair in warm and inviting colors.' This image was generated using AI on Deep Dream Generator.[^1]
+Using the prompt 'Generate a picture of a cozy reading nook with a bookshelf filled with books and a comfortable armchair in warm and inviting colors.' This image was generated using AI on Deep Dream Generator.[1]
 
 # Criteria A: Planning
 
@@ -28,11 +28,11 @@ I will design and develop a website for my school’s book club. This website wi
 ## Rationale for Proposed Solution
 There are web and mobile applications; however, mobile apps can only be accessed on mobile devices. Web applications, on the other hand, are accessible on any device with a browser. Therefore,  I will be creating a web application for my school's book club to bring all the necessary features in one place and provide a space for all book club members to connect and engage with each other.
 
-I decided to use HTML to develop the website as it is the standard markup language for creating web pages and web applications. HTML provides a foundation for building the user interface of the social network [^6]. In addition, I have chosen to use Bootstrap CSS, which offers responsiveness and a mobile-first approach, catering to a variety of devices and screen sizes. This combination ensures that the platform will be compatible with various devices and browsers, allowing a wide range of users to access the application with a consistent interface [^7].
+I decided to use HTML to develop the website as it is the standard markup language for creating web pages and web applications. HTML provides a foundation for building the user interface of the social network [6]. In addition, I have chosen to use Bootstrap CSS, which offers responsiveness and a mobile-first approach, catering to a variety of devices and screen sizes. This combination ensures that the platform will be compatible with various devices and browsers, allowing a wide range of users to access the application with a consistent interface [7].
 
-Many tools exist for creating web applications, including JavaScript, Python, C++, and more. I've chosen Python for my web application due to its vast library selection [^8], enabling me to meet the book club's large-scale web app needs. I opted for Flask among Python frameworks like Flask because of its flexibility, which is crucial for specialized web apps. Unlike stricter frameworks such as Django, Flask works with numerous tools, allowing me to tailor the social network to the book club's requirements. [^9]
+Many tools exist for creating web applications, including JavaScript, Python, C++, and more. I've chosen Python for my web application due to its vast library selection [^8], enabling me to meet the book club's large-scale web app needs. I opted for Flask among Python frameworks like Flask because of its flexibility, which is crucial for specialized web apps. Unlike stricter frameworks such as Django, Flask works with numerous tools, allowing me to tailor the social network to the book club's requirements. [9]
 
-For the website's database, I will be using SQLite. SQLite is a free database that does not require any additional server process, and is implemented on a single file. This database fits my client's needs as it is designed to handle large amounts of data efficiently [^10]. It will be able to store all kinds of information safely and quickly, as it does not require to go through long procedural routines other databases such as IBM db2 use [^11]. SQLite is the best option for the social network as it is reliable, efficient, and cost-friendly.
+For the website's database, I will be using SQLite. SQLite is a free database that does not require any additional server process, and is implemented on a single file. This database fits my client's needs as it is designed to handle large amounts of data efficiently [10]. It will be able to store all kinds of information safely and quickly, as it does not require to go through long procedural routines other databases such as IBM db2 use [11]. SQLite is the best option for the social network as it is reliable, efficient, and cost-friendly.
 
 _Word Count_: **491**
 
