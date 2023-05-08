@@ -254,7 +254,7 @@ In this line, the `user[3] | flag` part utilizes the custom `flag` filter to con
 
 <img width="986" alt="Screen Shot 2023-05-08 at 10 49 19 PM" src="https://user-images.githubusercontent.com/111751273/236841443-e2df76b1-96f7-42ee-b2ef-ded8e557570a.png">
 <p align="center">
-  <i>(Disclaimer: The data presented is fictional and does not depict real comments or authors)</i>
+  <i>(Disclaimer: The data presented is fictional and does not represent a real student user)</i>
 </p>
 
 ### Token Encryption
