@@ -513,6 +513,16 @@ Through this method, I was able to successfully meet my client's requirement of 
 
 ## Evidence of Consultation
 ![Screen Shot 2023-05-06 at 8 46 37 PM](https://user-images.githubusercontent.com/111751273/236622106-71c778b6-838a-4e12-ac89-4bdc96d31c0d.png)
-<i>Fig. </i> (Messenger names kept confidential for privacy purposes)
+<i>Fig. 13</i> Conversation between two club members (Disclaimer: Messenger names kept confidential for privacy purposes)
+
+<img width="1037" alt="Screen Shot 2023-05-09 at 4 40 35 AM" src="https://user-images.githubusercontent.com/111751273/236918166-e0088101-a6cd-45cf-93af-acf55654d178.png">
+<i>Fig. 14</i> Client's approval of all success criterias and development plan. (Disclaimer: Mailer and recipient names kept confidential for privacy purposes)
+
+
+
+
+
+
+
 
 
