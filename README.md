@@ -17,7 +17,8 @@ As a School X book club member, I've observed the absence of a dedicated social 
 
 4. *[Issue tackled: "or even see past posts they have liked"]* Users will be able to see all posts they have liked in the past.
 
-5. *[Issue: tackled: “As there are many different post categories, it is hard to locate specific posts.”]* The platform will allow the user to select what kind of posts they would like to view by category.
+5. *[Issue: tackled: “As there are many different post categories, it is hard to locate specific posts.”]* The platform will allow the user to select what kind of posts they would like to view by category.<img width="1512" alt="Screen Shot 2023-05-08 at 10 54 16 PM" src="https://user-images.githubusercontent.com/111751273/236842627-a39878e3-4822-40b9-adb2-f8cc190037fb.png">
+
 
 6. *[Issue tackled: "discovering popular content is challenging due to the presence of numerous less-liked or disliked posts."]* Implement a filtering or sorting mechanism that allows users to easily discover and view highly-liked or popular posts.
 
@@ -207,6 +208,7 @@ if '@schoolx.edu' not in email:
 ```
 My client wanted to create a social network platform exclusively for members of School X's book club. To achieve this, I needed to ensure that only students from School X could register using their school email addresses. To solve this problem, I used a basic yet effective 'if' statement in Python to verify if the user is attempting to register with a School X email address or not as shown in the code above. Further, when a user tries to register with an email that is not from School X, I made an error flash pop up message to remind the user that they need to register with a School X email.
 
+
 ### Country Selection
 ```.html
 <label for="country" class="form-label">Country</label>
@@ -216,6 +218,9 @@ My client wanted to create a social network platform exclusively for members of 
   </select>
 ```
 As the client's bookclub is part of an international school, I thought it would be a nice addition for the students (users) to add what country they are from. I was able to achieve this by creating a dropdown menu in the registration screen, allowing the user to select their country. At first I had trouble finding a way to list all the countries for a dropdown, until I found a github repository that detailed the steps for a dropdown selection for all countries [13]. I was able to implement the country selection feature by creating an HTML `<label>` element to display the text "Country" and associating it with a `<select>` element. The `<select>` element contains a list of `<option>` elements, each representing a country, and allows users to choose one from the list.
+
+<img width="1512" alt="Screen Shot 2023-05-08 at 10 47 51 PM" src="https://user-images.githubusercontent.com/111751273/236841101-bd249c50-93c6-40aa-8448-896ddb03d9e6.png">
+
 
 ### Country Flag
 Following the third meeting with my client, they expressed a desire to enhance the country representation on the web application. Previously, the user's country was only displayed as text in their profile. I suggested incorporating the country's flag alongside the text for a more visually appealing presentation, and the client was pleased with this idea. This was a challenge for me because it required converting country names to their respective two-letter codes, fetching the appropriate flag images, and seamlessly integrating them into the existing design of the user profiles. However, after doing research, I was able to learn how to utilize the `pycountry` library, which provides a convenient way to access country information [15].
@@ -228,7 +233,7 @@ def flag(country):
         return 'unknown'
 ```
 
-As shown in the function above, I used a `try` block to attempt retrieving the two-letter country code using the `pycountry.countries.get(name=country).alpha_2.lower()` function. If the provided country name is valid, this method returns the country code in lowercase. However, if the country name is not found within the `pycountry` library, the `try` block encounters an exception. In this case, the `except` block is executed, and the function returns the string `'unknown'` to indicate that the country code could not be determined for the given input. 
+As shown in the function above, I used a `try` block to attempt retrieving the two-letter country code using the combination of functions: `pycountry.countries.get(name=country).alpha_2.lower()`. If the provided country name is valid, this method returns the country code in lowercase. However, if the country name is not found within the `pycountry` library, the `try` block encounters an exception. In this case, the `except` block is executed, and the function returns the string `'unknown'` to indicate that the country code could not be determined for the given input. 
 
 After creating the function to convert country names to their respective two-letter codes, I moved on to displaying the flags in the HTML. To achieve this, I utilized an open-source library called `"flag-icons"` by Lipis [16], which provides a collection of country flags in the form of CSS classes. To include this library in the project, I added the following line in the HTML head section:
 
@@ -247,6 +252,9 @@ In the HTML template, I then used the following line to display the user's count
 <h6 class="card-subtitle mb-2">Country: <span class="fi fi-{{ user[3] | flag }}"></span> {{ user[3] }}</h6>
 ```
 In this line, the `user[3] | flag` part utilizes the custom `flag` filter to convert the country name stored in `user[3]` from the database to the appropriate two-letter code. This effectively displayed the correct flag next to the country name in the user profile and successfully addressed the client's request for a more visually appealing representation of the user's country.
+
+<img width="986" alt="Screen Shot 2023-05-08 at 10 49 19 PM" src="https://user-images.githubusercontent.com/111751273/236841443-e2df76b1-96f7-42ee-b2ef-ded8e557570a.png">
+
 
 ### Token Encryption
 While developing the website for my client, I realized that the website had lacked user authorization. Meaning anyone could access the web application wihtout having to actually register. To solve this I tried using cookies for identification purposes. However, it is essential to make sure that these cookies are protected. Simply assigning a user ID to a session, such as `session['token'] = user_id`, is not a secure practice. This is because a user could easily access their browser's inspector and modify the user ID to gain unauthorized access. Here is an example of an unprotected changeable token:
@@ -311,13 +319,15 @@ To get the post category shown in the code above from earlier, I implemented a f
     <!-- rest of post categories -->
 </select>
 ```
+<img width="1512" alt="Screen Shot 2023-05-08 at 10 49 48 PM" src="https://user-images.githubusercontent.com/111751273/236841551-305958d9-b70d-4682-b678-058f0a419353.png">
+
 
 ### Edit Post/Comment (Success Criteria: 2)
 While developing this edit post and comment feature, I followed the steps I took to allow users create posts and comments. I was able to meet my client's needs by just creating a new function and query. Editting a post/comment is basically inserting a "new" post/comment into an already existing post/comment. I followed the exact same steps for editting comments and the only differences were the names of variables. For example, here is a code snippet for editting posts:
 ```.py
 post = db.search(f"SELECT * FROM posts WHERE id = {post_id}")
 ```
-In this code,  I am using the `db.search()` function to query the SQLite database and retrieve a specific post based on its `post_id` from the "posts" table. 
+In this code,  I am using the `db.search()` function to query the SQLite database and retrieve a specific post based on its `id` from the "posts" table. 
 
 After the post is located, the owner of the post is redirected to the edit_post page, which is the same as the page shown when they were creating their post, however all the text fields, such as the title, category, content, are already filled out. This allows them to make the desired changes, and after they hit save changes, the database should update with the new edits to their post. Here is the edit query that I created:
 
@@ -325,9 +335,15 @@ After the post is located, the owner of the post is redirected to the edit_post 
 query = f"UPDATE posts SET title='{title}', category='{category}', content='{content}', image_name='{image_name}' WHERE id={post_id}"
 db.run_save(query)
 ```
-This is similar to the query from creating posts, however this query uses the `UPDATE` and `SET` to insert the new values into existing post values.
+This is similar to the query from creating posts, however this query uses `UPDATE` and `SET`. 'UPDATE', will update the table "posts", and `SET`, sets the new values into existing post values.
 
-### Delete Post/Comment (Success Criteria: 2)
+<img width="1000" alt="Screen Shot 2023-05-08 at 10 52 59 PM" src="https://user-images.githubusercontent.com/111751273/236842384-1e2406a2-a6cb-4148-a199-4c9be4f39edf.png">
+
+<img width="1512" alt="Screen Shot 2023-05-08 at 10 55 13 PM" src="https://user-images.githubusercontent.com/111751273/236842947-dfbc1ec1-8083-4e8b-b557-2a99317d4ed9.png">
+
+<img width="993" alt="Screen Shot 2023-05-08 at 10 55 50 PM" src="https://user-images.githubusercontent.com/111751273/236843076-cdd04d00-ac3c-4d12-b8c8-9cb9f6d65af0.png">
+
+### Delete Posts/Comments (Success Criteria: 2)
 To also fulfill my client's requirement of being able to delete posts and comment, I created a function that removes chosen posts/comments from the database. Below shows the function that deletes posts. This method is also used to delete comments as well.
 ```.py
 def delete_post(post_id):
@@ -336,9 +352,16 @@ def delete_post(post_id):
     db.run_save(query=delete_post)
     return redirect('/profile')
 ```
-Within this function, I first establish a connection to the SQLite database "shelfshare.db", where all user posts and comments are stored. Next, I created a query that deletes 
+Within this function, I first establish a connection to the SQLite database "shelfshare.db", where all user posts and comments are stored. Next, I created a query that deletes the post that has the 'post_id' as its 'id'. After the post is removed from the database, it redirects the user back to his profile with the post deleted.
+
+<img width="1012" alt="Screen Shot 2023-05-08 at 10 59 52 PM" src="https://user-images.githubusercontent.com/111751273/236844066-c165a3df-7cb3-44f1-897b-cf195d43a7e0.png">
+
+<img width="1010" alt="Screen Shot 2023-05-08 at 11 00 06 PM" src="https://user-images.githubusercontent.com/111751273/236844116-a872f0b8-f304-4726-aa62-be592851c695.png">
 
         
+### Showing Users Posts and Comments
+
+
 
 
 # Criteria D: Functionality
