@@ -17,8 +17,7 @@ As a School X book club member, I've observed the absence of a dedicated social 
 
 4. *[Issue tackled: "or even see past posts they have liked"]* Users will be able to see all posts they have liked in the past.
 
-5. *[Issue: tackled: “As there are many different post categories, it is hard to locate specific posts.”]* The platform will allow the user to select what kind of posts they would like to view by category.<img width="1512" alt="Screen Shot 2023-05-08 at 10 54 16 PM" src="https://user-images.githubusercontent.com/111751273/236842627-a39878e3-4822-40b9-adb2-f8cc190037fb.png">
-
+5. *[Issue: tackled: “As there are many different post categories, it is hard to locate specific posts.”]* The platform will allow the user to select what kind of posts they would like to view by category.
 
 6. *[Issue tackled: "discovering popular content is challenging due to the presence of numerous less-liked or disliked posts."]* Implement a filtering or sorting mechanism that allows users to easily discover and view highly-liked or popular posts.
 
