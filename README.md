@@ -358,10 +358,43 @@ Within this function, I first establish a connection to the SQLite database "she
 <img width="1010" alt="Screen Shot 2023-05-08 at 11 00 06 PM" src="https://user-images.githubusercontent.com/111751273/236844116-a872f0b8-f304-4726-aa62-be592851c695.png">
 
         
-### Showing Users Posts and Comments
+### Uploading Images (Success Criteria: 3)
+One of the challenges I had faced was meeting my clien'ts requirement of allowing users to upload images. I did not know how to do that, so I had to reserach different methods. I was able to solve this by learning to how to use Python's Werkzeug library to implement image uploads [17]. The code snippet below demonstrates how I achieved this:
+```.py
+if 'image' in request.files:
+    image = request.files['image']
+    if image.filename != '':
+        filename = secure_filename(image.filename)
+        image.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+    else:
+        filename = None
+else:
+    filename = None
+```
+The code checks whether an image file was submitted by the user or not. If present, it assigns the image to a variable and verifies that it has a filename. Then, it uses the Werkzeug library's `secure_filename` function to ensure the filename is safe to store, and saves the image in the specified upload folder. If no image is provided or if the image filename is empty, the code sets the filename variable to `None`.
 
+<img width="693" alt="Screen Shot 2023-05-08 at 11 17 42 PM" src="https://user-images.githubusercontent.com/111751273/236848238-b4f156b1-3aca-4908-8b76-412283b6b363.png">
+As shown in the image above, the upload folder holds all images that have been uploaded by users. The upload folder not only keeps the server's file structure organized but also allows all users of the website to access and view the uploaded images. By storing the images in a centralized location, the web application can easily serve these images to users when they visit the relevant pages or posts.
 
+### Jinja2 for Past Likes (Success Criteria: 4)
+My client wanted users to be able to see posts they had liked in the past. I was able to fulfill my client's need by using Jinja2. Jinja2 is a templating engine for Python that allows me to generate my client's web applications HTML pages. It enables the incorporation of variables, loops, and conditional statements (if statements) directly into HTML templates, allowing me to create pages that display customized content for each user, such as showing a list of posts they have liked in the past. Here is part of the HTML template code I wrote for allowing users to see their past liked posts:
+```.html
+<h3>Liked Posts:</h3>
+  {% if liked_posts %}
+      {% for post in liked_posts %}
+          <!--all users liked posts-->
+      {% endfor %}
+      {% else %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title mb-1">You have no liked posts</h5>
+            </div>
+        </div>
+  {% endif %}
+```
+In this HTML template, Jinja2 is used to display the list of thr user's liked posts. The `{% if liked_posts %}` statement checks if there are any liked posts available. If there are, the `{% for post in liked_posts %}` loop goes through each liked post and displays its content within the <!--all users liked posts-->. If there are no liked posts, the `{% else %}` block is executed, displaying a message "You have no liked posts" inside a card element. 
 
+Furthermore, I utilized Jinja2 in a similar manner to display all the posts and comments a user has made on the platform. By iterating through the lists of user posts and comments. This approach satisfies my client's need of allowing users to see their past likes, and on top of that, all their posts and comments.
 
 # Criteria D: Functionality
 
@@ -383,6 +416,9 @@ Within this function, I first establish a connection to the SQLite database "she
 14. auth0.com. “JSON Web Tokens - Jwt.io.” Jwt.io, Auth0, 2013, jwt.io/introduction. Accessed April 22 2023.
 15. “Pycountry.” PyPI, 5 Mar. 2022, pypi.org/project/pycountry/. Accessed 8 May 2023.
 16.lipis. “Lipis/Flag-Icons: A Curated Collection of All Country Flags in SVG — plus the CSS for Easier Integration.” GitHub, 28 Mar. 2023, github.com/lipis/flag-icons. Accessed 25 Apr. 2023.
+17. Soumitra. “Upload and Display Image Using Python Flask - Roy Tutorials.” Roy Tutorials, 13 Apr. 2020, roytuts.com/upload-and-display-image-using-python-flask/. Accessed 29 Apr. 2023.
+
+‌
 
 ‌
 
