@@ -207,7 +207,22 @@ if '@schoolx.edu' not in email:
 ```
 My client wanted to create a social network platform exclusively for members of School X's book club. To achieve this, I needed to ensure that only students from School X could register using their school email addresses. To solve this problem, I used a basic yet effective 'if' statement in Python to verify if the user is attempting to register with a School X email address or not as shown in the code snippet above. Further, when a user tries to register with an email thats not from School X, I made an error pop up message to remind the user that they need to register with a School X email.
 
-### 
+### Country Selection
+```.html
+<label for="country" class="form-label">Country</label>
+  <select id="country" name="country" class="form-control">
+    <option value="Afghanistan">Afghanistan</option>
+    <!-- rest of countries in alphabetical order -->
+  </select>
+```
+As the client's bookclub is part of an international school, I thought it would be a nice addition for the students (users) to add what country they are from. I was able to achieve this by creating a dropdown menu in the registration screen, allowing the user to select their country. At first I had trouble finding a way to list all the countries for a dropdown, until I found a github repository that detailed the steps for a dropdown selection for all countries [13]. I was able to implement the country selection feature by creating an HTML `<label>` element to display the text "Country" and associating it with a `<select>` element. The `<select>` element contains a list of `<option>` elements, each representing a country, and allows users to choose one from the list.
+
+### Token Encryption
+While developing the website for my client, I realized that the website had lacked user authorization. Meaning anyone could access the web application wihtout having to actually register. To solve this I tried using cookies for identification purposes. However, it is essential to make sure that these cookies are protected. Simply assigning a user ID to a session, such as session['token'] = user_id, is not a secure practice. This is because a user could easily access their browser's inspector and modify the user ID to gain unauthorized access.
+
+<img width="1068" alt="Screen Shot 2023-05-08 at 6 03 53 PM" src="https://user-images.githubusercontent.com/111751273/236783651-808e1f23-8904-44fc-861e-00e903b90316.png">
+<i>Fig. </i> Here is an example of an unprotected changeable token.
+
 
 
 
@@ -226,8 +241,9 @@ My client wanted to create a social network platform exclusively for members of 
 9. Simplilearn. “Django vs. Flask: Understanding the Major Differences.” Simplilearn.com, Simplilearn, 4 Feb. 2021, www.simplilearn.com/flask-vs-django-article#:~:text=Flask%20provides%20complete%20control%20and,best%20for%20developing%20sophisticated%20applications. Accessed 10 April 2023.
 10. Gomathy, Kavya. "5 Reasons to Use SQLite, the Tiny Giant for Your Next Project." Medium, The Startup, 4 Jan. 2022, https://medium.com/swlh/5-reasons-to-use-sqlite-the-tiny-giant-for-your-next-project-a6bc384b2df4. Accessed April 10, 2023
 11. Yegulalp, Serdar. "Why You Should Use SQLite." InfoWorld, IDG Communications, Inc., 13 Feb. 2019, https://www.infoworld.com/article/3331923/why-you-should-use-sqlite.html. Accessed April 10, 2023
-12. Otto, Mark. “Get Started with Bootstrap.” Getbootstrap.com, 2023, getbootstrap.com/docs/5.3/getting-started/introduction/. Accessed 26 Apr. 2023.
-13.lipis. “Lipis/Flag-Icons: A Curated Collection of All Country Flags in SVG — plus the CSS for Easier Integration.” GitHub, 28 Mar. 2023, github.com/lipis/flag-icons. Accessed 23 Apr. 2023.
+12. Otto, Mark. “Get Started with Bootstrap.” Getbootstrap.com, 2023, getbootstrap.com/docs/5.3/getting-started/introduction/. Accessed 15 Apr. 2023.
+13. 262588213843476. “HTML Country Select Dropdown List.” Gist, 3 May 2023, gist.github.com/danrovito/977bcb97c9c2dfd3398a. Accessed 20 Apr. 2023.
+14.lipis. “Lipis/Flag-Icons: A Curated Collection of All Country Flags in SVG — plus the CSS for Easier Integration.” GitHub, 28 Mar. 2023, github.com/lipis/flag-icons. Accessed 25 Apr. 2023.
 
 ‌
 
