@@ -217,11 +217,63 @@ My client wanted to create a social network platform exclusively for members of 
 ```
 As the client's bookclub is part of an international school, I thought it would be a nice addition for the students (users) to add what country they are from. I was able to achieve this by creating a dropdown menu in the registration screen, allowing the user to select their country. At first I had trouble finding a way to list all the countries for a dropdown, until I found a github repository that detailed the steps for a dropdown selection for all countries [13]. I was able to implement the country selection feature by creating an HTML `<label>` element to display the text "Country" and associating it with a `<select>` element. The `<select>` element contains a list of `<option>` elements, each representing a country, and allows users to choose one from the list.
 
+### Country Flag
+Following the third meeting with my client, they expressed a desire to enhance the country representation on the web application. Previously, the user's country was only displayed as text in their profile. I suggested incorporating the country's flag alongside the text for a more visually appealing presentation, and the client was pleased with this idea. This was a challenge for me because it required converting country names to their respective two-letter codes, fetching the appropriate flag images, and seamlessly integrating them into the existing design of the user profiles. However, after doing research, I was able to learn how to utilize the `pycountry` library, which provides a convenient way to access country information [15].
+
+```.py
+def flag(country):
+    try:
+        return pycountry.countries.get(name=country).alpha_2.lower()
+    except:
+        return 'unknown'
+```
+
+As shown in the function above, I used a `try` block to attempt retrieving the two-letter country code using the `pycountry.countries.get(name=country).alpha_2.lower()` method. If the provided country name is valid, this method returns the country code in lowercase. However, if the country name is not found within the `pycountry` library, the `try` block encounters an exception. In this case, the `except` block is executed, and the function returns the string `'unknown'` to indicate that the country code could not be determined for the given input. 
+
+After creating the function to convert country names to their respective two-letter codes, I moved on to displaying the flags in the HTML. To achieve this, I utilized an open-source library called `"flag-icons"` by Lipis [16], which provides a collection of country flags in the form of CSS classes. To include this library in the project, I added the following line in the HTML head section:
+
+```.html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
+```
+
+With the flag function created and the "flag-icons" library integrated, I needed to make the function available in the Jinja2 templates used by the Flask application. To achieve this, I registered the flag function as a custom filter in the Jinja2 environment, like so:
+```.py
+app.jinja_env.filters['flag'] = flag
+```
+
+In the HTML template, I then used the following line to display the user's country along with the corresponding flag icon:
+```.html
+<h6 class="card-subtitle mb-2">Country: <span class="fi fi-{{ user[3] | flag }}"></span> {{ user[3] }}</h6>
+```
+
 ### Token Encryption
-While developing the website for my client, I realized that the website had lacked user authorization. Meaning anyone could access the web application wihtout having to actually register. To solve this I tried using cookies for identification purposes. However, it is essential to make sure that these cookies are protected. Simply assigning a user ID to a session, such as session['token'] = user_id, is not a secure practice. This is because a user could easily access their browser's inspector and modify the user ID to gain unauthorized access.
+While developing the website for my client, I realized that the website had lacked user authorization. Meaning anyone could access the web application wihtout having to actually register. To solve this I tried using cookies for identification purposes. However, it is essential to make sure that these cookies are protected. Simply assigning a user ID to a session, such as session['token'] = user_id, is not a secure practice. This is because a user could easily access their browser's inspector and modify the user ID to gain unauthorized access. Here is an example of an unprotected changeable token:
 
 <img width="1068" alt="Screen Shot 2023-05-08 at 6 03 53 PM" src="https://user-images.githubusercontent.com/111751273/236783651-808e1f23-8904-44fc-861e-00e903b90316.png">
-<i>Fig. </i> Here is an example of an unprotected changeable token.
+Here is an example of an unprotected changeable token.
+
+After doing research, I learned about JSON Web Tokens (JWT). JWT is a standard token format that is often used for authentication and authorization purposes [14]. To improve the security of the token, I used JWT to encode the user ID with a token encryption key, as shown in the following example: `jwt.encode({'user_id': user_id}, token_encryption_key, algorithm='HS256')`. This encrypts the token as shown:
+
+<img width="1070" alt="Screen Shot 2023-05-08 at 7 13 15 PM" src="https://user-images.githubusercontent.com/111751273/236798266-d22360f7-8781-48d6-8c00-d02db3a6951a.png">
+
+
+However, this method still has an issue. If the user's computer is compromised, a hacker could potentially reuse the encrypted cookie to gain unauthorized access. To solve this issue, I implemented tokens set to expire after a specific amount of time after the user logs in, using JWT along with the `dotenv` library for managing the encryption key. This involves adding both the user ID and an expiration date to the token. Here is the code I created:
+```.py
+if check_password(user_password=password, hashed_password=hash):
+    print("Password correct.")
+    token = jwt.encode({'user_id': id, 'exp': datetime.utcnow() + timedelta(minutes=180)}, token_key, algorithm='HS256')
+    session['token'] = token
+    print("Token created.")
+    return redirect("/")
+```
+
+As a result, even if an attacker gains access to the token, it will eventually become invalid. This solution effectively addresses the authorization issue and enhances the security of the website. 
+
+
+### Success Criteria 2: Users should be able to post posts of different categories such as: Announcements,  Book Reviews, and Discussions, and be able to edit/delete their posts and comments
+
+
+
 
 
 
@@ -243,7 +295,9 @@ While developing the website for my client, I realized that the website had lack
 11. Yegulalp, Serdar. "Why You Should Use SQLite." InfoWorld, IDG Communications, Inc., 13 Feb. 2019, https://www.infoworld.com/article/3331923/why-you-should-use-sqlite.html. Accessed April 10, 2023
 12. Otto, Mark. “Get Started with Bootstrap.” Getbootstrap.com, 2023, getbootstrap.com/docs/5.3/getting-started/introduction/. Accessed 15 Apr. 2023.
 13. 262588213843476. “HTML Country Select Dropdown List.” Gist, 3 May 2023, gist.github.com/danrovito/977bcb97c9c2dfd3398a. Accessed 20 Apr. 2023.
-14.lipis. “Lipis/Flag-Icons: A Curated Collection of All Country Flags in SVG — plus the CSS for Easier Integration.” GitHub, 28 Mar. 2023, github.com/lipis/flag-icons. Accessed 25 Apr. 2023.
+14. auth0.com. “JSON Web Tokens - Jwt.io.” Jwt.io, Auth0, 2013, jwt.io/introduction. Accessed April 22 2023.
+15. “Pycountry.” PyPI, 5 Mar. 2022, pypi.org/project/pycountry/. Accessed 8 May 2023.
+16.lipis. “Lipis/Flag-Icons: A Curated Collection of All Country Flags in SVG — plus the CSS for Easier Integration.” GitHub, 28 Mar. 2023, github.com/lipis/flag-icons. Accessed 25 Apr. 2023.
 
 ‌
 
