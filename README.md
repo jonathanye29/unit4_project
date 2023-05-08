@@ -443,8 +443,8 @@ As part of my client's needs, they want the user to be able to select what kind 
 In this HTML code snippet, a responsive navigation bar is created using classes from Bootstrap's CSS library [12]. The navigation bar contains a brand name "ShelfShare" which serves as a link to the home page. Inside the navigation bar, there is a `<ul>` element containing a list of categories as `<li>` elements, each with an `<a>` element. The `<a>` element inside each list item serves as a link to the respective category page. When a user clicks on one of these links, they are redirected to the corresponding category page. For example, when a user clicks on the "Announcements" link, they are taken to the "/announcements" URL, where all posts in the Announcements category are displayed. This fulfills my client's requirement of allowing users to select what kind of posts they would like to view by category.
 
 
-### Filtration Feature (Success Criteria: 6)
-Another challenge I came across while developing my client's web application was implementing the filtration feature that sorts posts by latest and top liked. To overcome this challenge, I discovered Document Object Model (DOM) manipulation techniques in JavaScript that enabled me to interact with the HTML elements on the page [18].
+### Sort Feature (Success Criteria: 6)
+Another challenge I came across while developing my client's web application was implementing the sorting feature that sorts posts by latest and top liked. To overcome this challenge, I discovered Document Object Model (DOM) manipulation techniques in JavaScript that enabled me to interact with the HTML elements on the page [18].
 
 First, I used an SQL query to fetch the most liked posts:
 ```.sql
@@ -463,10 +463,21 @@ The code snippet shown above creates a dropdown menu using HTML elements. The `<
 1. `<option value="latest" selected>`: This option sorts posts by the latest ones first. The `selected` attribute makes it the default selection when the page loads.
 2. `<option value="popular">`: This option sorts posts by the top liked ones.
 
-When the user selects an option, its `value` attribute will be used by JavaScript to determine the sorting method to apply.
-  
-  
-  
+When the user selects an option, its `value` attribute will be used by JavaScript to determine the sorting method to apply. I utilized JavaScript and DOM manipulation to detect when the user changes the selection in the dropdown menu. When a change occurs, the script executes the appropriate action, such as redirecting the user to a different page that displays the posts sorted based on the selected option. This way, the sorting preferences selected by the user are applied seamlessly without having to reload the entire page. Here is the script:
+```.html
+<script>
+    const sortSelect = document.querySelector('#sort');
+    sortSelect.addEventListener('change', function() {
+        const value = this.value;
+        if (value === 'popular') {
+            window.location.href = '/top_liked';
+        }
+    });
+</script>
+```
+The script first uses `document.querySelector('#sort')` to select the dropdown menu with the `id` "sort". It then assigns this HTML element to the constant variable `sortSelect`. Next, an event listener is added to `sortSelect` to listen for the 'change' event, which occurs when the user selects a different option from the dropdown menu. When the 'change' event is detected, an anonymous function is executed. Inside this function, the `value` property of the selected option is assigned to the constant variable `value`. A conditional statement then checks if `value` is equal to 'popular', which corresponds to the "Top Liked" option. If this condition is met, the script uses `window.location.href` to navigate the user to the '/top_liked' URL, where the posts are sorted according to the number of likes they have received.
+
+Through this method, I was able to successfully meet my client's requirement of having a sorting feature in the web application.
   
 # Criteria D: Functionality
 
