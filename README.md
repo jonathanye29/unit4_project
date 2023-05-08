@@ -19,7 +19,7 @@ As a School X book club member, I've observed the absence of a dedicated social 
 
 5. *[Issue: tackled: “As there are many different post categories, it is hard to locate specific posts.”]* The platform will allow the user to select what kind of posts they would like to view by category.
 
-6. *[Issue tackled: "discovering popular content is challenging due to the presence of numerous less-liked or disliked posts."]* Implement a filtering or sorting mechanism that allows users to easily discover and view highly-liked or popular posts.
+6. *[Issue tackled: "discovering popular content is challenging due to the presence of numerous less-liked or disliked posts."]* Implement a filtering feature that allows users to view the top liked posts.
 
 ## Design Statement
 I will design and develop a website for my school’s book club. This website will be developed using HTML, Bootstrap CSS, Python, SQLite, and the Flask framework. It will take approximately 3 weeks to develop and will be evaluated based on the given criteria.
@@ -187,7 +187,7 @@ The class shown in the UML Diagram is responsible for handling database interact
 
 ## List of techniques used
 - Flask Library/Routes
-- Python inside HTML
+- Python/Javascript inside HTML
 - CSS Styling
 - Object-Oriented Programming(OOP)
 - For loops
@@ -197,6 +197,7 @@ The class shown in the UML Diagram is responsible for handling database interact
 - Lists
 - Token-based authentication
 - DRY Coding Technique
+- Document Object Model (DOM)
 
 ## Development
 
@@ -271,7 +272,7 @@ This encrypts the token as shown:
 
 <img width="1070" alt="Screen Shot 2023-05-08 at 7 13 15 PM" src="https://user-images.githubusercontent.com/111751273/236798266-d22360f7-8781-48d6-8c00-d02db3a6951a.png">
 
-However, this method still has an issue. If the user's computer is compromised, a hacker could potentially reuse the encrypted cookie to gain unauthorized access. To solve this issue, I implemented tokens set to expire after a specific amount of time after the user logs in, using JWT along with the `dotenv` library for managing the encryption key. This involves adding both the user ID and an expiration date to the token. Here is the code I created:
+However, this method still has an issue. If the user's computer is compromised, a hacker could potentially reuse the encrypted cookie to gain unauthorized access. To solve this issue, I implemented tokens set to expire after a specific amount of time after the user logs in, using JWT along with the `dotenv` library for managing the encryption key. This involves adding both the user ID and an expiration date to the token. Here is code I wrote within the login function that sets the token expiration:
 ```.py
 if check_password(user_password=password, hashed_password=hash):
     print("Password correct.")
@@ -400,6 +401,73 @@ Furthermore, I utilized Jinja2 in a similar manner to display all the posts and 
 
 <img width="700" alt="Screen Shot 2023-05-08 at 11 46 59 PM" src="https://user-images.githubusercontent.com/111751273/236855559-ef19893e-a742-475a-a1c6-fcd4790ade81.png">
 
+### Liking Posts
+```.py
+if like_record:
+    # If the like record exists, delete it (unlike)
+    unlike_query = f"DELETE FROM likes WHERE user_id = {user_id} AND post_id = {post_id}"
+    db.run_save(query=unlike_query)
+    
+else:
+    # If the like record doesn't exist, create it (like)
+    like_query = f"INSERT INTO likes (user_id, post_id) VALUES ('{user_id}', '{post_id}')"
+    db.run_save(query=like_query)
+```
+
+As a part of the web application, the client wants users to be able to like and unlike posts. To implement this feature, the code I created above checks if a "like" record already exists for a specific user and post combination in the "likes" table of the database.
+
+If a "like" record exists, it means the user has already liked the post, so the code performs an "unlike" action. In this case, the `unlike_query` variable stores an SQL query that removes the existing "like" record from the "likes" table for the given user and post. The `db.run_save()` function is then called to execute the query and update the database.
+
+If a "like" record does not exist, it means the user hasn't liked the post yet, so the code performs a "like" action. Here, the `like_query` variable stores an SQL query that inserts a new "like" record into the "likes" table for the given user and post. The `db.run_save()` function is then called to execute the query and update the database.
+
+This implementation allows users to like and unlike posts, satisfying my client's need.
+
+
+### View by Category (Success Criteria: 5)
+As part of my client's needs, they want the user to be able to select what kind of posts they want to see by category. I was able to satisfy this requirement by implementing a navigation bar at the top of the web applications page at all time that show all categories of posts (Announcements, Reminders, Book Reviews, Book Recommendations, and Discussions). Here is a part of the HTML template code that I wrote for the navigation bar:
+```.html
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="/">ShelfShare</a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a class="nav-link" href="/announcements">Announcements</a>
+              </li>
+              <!--all other categories-->
+          </ul>
+      </div>
+  </nav>
+</div>
+```
+In this HTML code snippet, a responsive navigation bar is created using classes from Bootstrap's CSS library [12]. The navigation bar contains a brand name "ShelfShare" which serves as a link to the home page. Inside the navigation bar, there is a `<ul>` element containing a list of categories as `<li>` elements, each with an `<a>` element. The `<a>` element inside each list item serves as a link to the respective category page. When a user clicks on one of these links, they are redirected to the corresponding category page. For example, when a user clicks on the "Announcements" link, they are taken to the "/announcements" URL, where all posts in the Announcements category are displayed. This fulfills my client's requirement of allowing users to select what kind of posts they would like to view by category.
+
+
+### Filtration Feature (Success Criteria: 6)
+Another challenge I came across while developing my client's web application was implementing the filtration feature that sorts posts by latest and top liked. To overcome this challenge, I discovered Document Object Model (DOM) manipulation techniques in JavaScript that enabled me to interact with the HTML elements on the page [18].
+
+First, I used an SQL query to fetch the most liked posts:
+```.sql
+SELECT posts.*, users.name FROM posts INNER JOIN users ON posts.user_id = users.id WHERE posts.id IN (SELECT post_id FROM likes GROUP BY post_id ORDER BY COUNT(*) DESC)
+```
+In the SQL query shown above, I used `INNER JOIN` to combine data from the posts and users tables, ensuring that the author's name is retrieved along with the post information. Then I filtered the posts based on their like count using a subquery. This subquery gets the `post_id` from the "likes" table, groups them by post ID, and sorts by like count in descending order. The `IN` operator in the `WHERE` clause filters the posts with the IDs from the subquery, displaying only the top liked posts.
+
+```.html
+<label for="sort">Sort Posts By:</label>
+    <select class="form-control mb-1" id="sort">
+        <option value="latest" selected>Latest</option>
+        <option value="popular">Top Liked</option>
+    </select>
+```
+The code snippet shown above creates a dropdown menu using HTML elements. The `<label>` element assigns a descriptive label, "Sort Posts By:", for the dropdown menu. The `<select>` element with the `class="form-control mb-1"` and `id="sort"` attributes creates the actual dropdown menu, styled with Bootstrap classes. Inside the `<select>` element, there are two `<option>` elements, each representing a sorting choice for the user:
+1. `<option value="latest" selected>`: This option sorts posts by the latest ones first. The `selected` attribute makes it the default selection when the page loads.
+2. `<option value="popular">`: This option sorts posts by the top liked ones.
+
+When the user selects an option, its `value` attribute will be used by JavaScript to determine the sorting method to apply.
+  
+  
+  
+  
 # Criteria D: Functionality
 
 
@@ -421,6 +489,9 @@ Furthermore, I utilized Jinja2 in a similar manner to display all the posts and 
 15. “Pycountry.” PyPI, 5 Mar. 2022, pypi.org/project/pycountry/. Accessed 8 May 2023.
 16.lipis. “Lipis/Flag-Icons: A Curated Collection of All Country Flags in SVG — plus the CSS for Easier Integration.” GitHub, 28 Mar. 2023, github.com/lipis/flag-icons. Accessed 25 Apr. 2023.
 17. Soumitra. “Upload and Display Image Using Python Flask - Roy Tutorials.” Roy Tutorials, 13 Apr. 2020, roytuts.com/upload-and-display-image-using-python-flask/. Accessed 29 Apr. 2023.
+18. “Examples of Web and XML Development Using the DOM - Web APIs | MDN.” Mozilla.org, 20 Feb. 2023, developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Examples. Accessed 1 May 2023.
+
+‌
 
 ‌
 
