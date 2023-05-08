@@ -228,7 +228,7 @@ def flag(country):
         return 'unknown'
 ```
 
-As shown in the function above, I used a `try` block to attempt retrieving the two-letter country code using the `pycountry.countries.get(name=country).alpha_2.lower()` method. If the provided country name is valid, this method returns the country code in lowercase. However, if the country name is not found within the `pycountry` library, the `try` block encounters an exception. In this case, the `except` block is executed, and the function returns the string `'unknown'` to indicate that the country code could not be determined for the given input. 
+As shown in the function above, I used a `try` block to attempt retrieving the two-letter country code using the `pycountry.countries.get(name=country).alpha_2.lower()` function. If the provided country name is valid, this method returns the country code in lowercase. However, if the country name is not found within the `pycountry` library, the `try` block encounters an exception. In this case, the `except` block is executed, and the function returns the string `'unknown'` to indicate that the country code could not be determined for the given input. 
 
 After creating the function to convert country names to their respective two-letter codes, I moved on to displaying the flags in the HTML. To achieve this, I utilized an open-source library called `"flag-icons"` by Lipis [16], which provides a collection of country flags in the form of CSS classes. To include this library in the project, I added the following line in the HTML head section:
 
