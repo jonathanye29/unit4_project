@@ -351,9 +351,9 @@ def delete_post(post_id):
     db.run_save(query=delete_post)
     return redirect('/profile')
 ```
-Within this function, I first establish a connection to the SQLite database "shelfshare.db", where all user posts and comments are stored. Next, I created a query that deletes the post that has the 'post_id' as its 'id'. After the post is removed from the database, it redirects the user back to his profile with the post deleted.
+Within this function, I first establish a connection to the SQLite database "shelfshare.db" using the database_worker class, which is an example of the Object-Oriented Programming (OOP) technique I use in developing my clients web application. This class handles various database-related tasks of the "shelfshare.db" database such as running queries, saving data, and fetching data. After the connection with the database is established, I created a query that deletes the post that has the 'post_id' as its 'id'. After the post is removed from the database, it redirects the user back to his profile with the post deleted.
 
-<img width="1012" alt="Screen Shot 2023-05-08 at 10 59 52 PM" src="https://user-images.githubusercontent.com/111751273/236844066-c165a3df-7cb3-44f1-897b-cf195d43a7e0.png">
+<img width="1020" alt="Screen Shot 2023-05-08 at 11 50 14 PM" src="https://user-images.githubusercontent.com/111751273/236856386-d3d56518-8a1b-47d5-aee8-d7f267b9644f.png">
 
 <img width="1010" alt="Screen Shot 2023-05-08 at 11 00 06 PM" src="https://user-images.githubusercontent.com/111751273/236844116-a872f0b8-f304-4726-aa62-be592851c695.png">
 
