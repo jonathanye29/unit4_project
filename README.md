@@ -396,6 +396,8 @@ In this HTML template, Jinja2 is used to display the list of thr user's liked po
 
 Furthermore, I utilized Jinja2 in a similar manner to display all the posts and comments a user has made on the platform. By iterating through the lists of user posts and comments. This approach satisfies my client's need of allowing users to see their past likes, and on top of that, all their posts and comments.
 
+<img width="1009" alt="Screen Shot 2023-05-08 at 11 46 59 PM" src="https://user-images.githubusercontent.com/111751273/236855559-ef19893e-a742-475a-a1c6-fcd4790ade81.png">
+
 # Criteria D: Functionality
 
 
