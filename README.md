@@ -126,12 +126,12 @@ The class shown in the UML Diagram is responsible for handling database interact
 
 ## Record of Tasks
 |Task No	|	Planned Action	|	Planned Outcome	|	Time estimate	|	Target completion date	|	Criterion 
-----------|-----------------|-----------------|---------------|--------------------------|----------
+----------|------------|---------------|---------------|----------------|----------
 1	|	"Brainstorm and write the problem definition	"	|	A clear description of the problem currently being faced.	|	15 mins.	|	05/04/2023	|	A
 2	|	"Brainstorm and write the design statement	"	|	A clear design statement that details the plan and tools that will be used to resolve the problem being faced.	|	10 mins.	|	05/04/2023	|	A
 3	|	Rationale for Proposed Solution	|	A clear justification that suits the client and developer.	|	20 mins.	|	10/04/2023	|	A
 4	|	"Brainstorm and write down success criterias	"	|	A clear success criteria that suits the client and resolves the problem	|	20 mins.	|	10/04/2023	|	A
-5	|	Create system diagram        	|	To have a clear idea of the hardware and software requirements for the proposed solution	|	45 minutes	|	13/04/2023	|	B
+5	|	Create system diagram  	|	To have a clear idea of the hardware and software requirements for the proposed solution	|	45 minutes	|	13/04/2023	|	B
 6	|	Draw a wire frame and write an explanation of it	|	Have a clear wire frame that accurately represents and describes the application and have a brief explanation	|	30 mins.	|	13/04/2023	|	B
 7	|	Create flow diagrams and write brief explanations for each  	|	Have accurate flow diagrams for different parts of the program with brief explanations	|	1 hour	|	14/04/2023	|	B
 8	|	Draw an ER diagram and write a breif explanation of it|	A clear and organized visual representation of the data structure for the ShelfShare network with a brief explanation	|	45 minutes        	|	14/04/2023	|	B
