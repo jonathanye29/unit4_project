@@ -196,10 +196,11 @@ The class shown in the UML Diagram is responsible for handling database interact
 - Functions
 - Lists
 - Token-based authentication
+- DRY Coding Technique
 
 ## Development
 
-### Success Criteria 1: The platform allows only students from School X to register using their school emails.
+### Email Policy (Success Criteria: 1)
 ```.py
 if '@schoolx.edu' not in email:
     flash(("Invalid email address, not a 'School X email.", 'danger'))
@@ -248,15 +249,18 @@ In the HTML template, I then used the following line to display the user's count
 In this line, the `user[3] | flag` part utilizes the custom `flag` filter to convert the country name stored in `user[3]` from the database to the appropriate two-letter code. This effectively displayed the correct flag next to the country name in the user profile and successfully addressed the client's request for a more visually appealing representation of the user's country.
 
 ### Token Encryption
-While developing the website for my client, I realized that the website had lacked user authorization. Meaning anyone could access the web application wihtout having to actually register. To solve this I tried using cookies for identification purposes. However, it is essential to make sure that these cookies are protected. Simply assigning a user ID to a session, such as session['token'] = user_id, is not a secure practice. This is because a user could easily access their browser's inspector and modify the user ID to gain unauthorized access. Here is an example of an unprotected changeable token:
+While developing the website for my client, I realized that the website had lacked user authorization. Meaning anyone could access the web application wihtout having to actually register. To solve this I tried using cookies for identification purposes. However, it is essential to make sure that these cookies are protected. Simply assigning a user ID to a session, such as `session['token'] = user_id`, is not a secure practice. This is because a user could easily access their browser's inspector and modify the user ID to gain unauthorized access. Here is an example of an unprotected changeable token:
 
 <img width="1068" alt="Screen Shot 2023-05-08 at 6 03 53 PM" src="https://user-images.githubusercontent.com/111751273/236783651-808e1f23-8904-44fc-861e-00e903b90316.png">
-Here is an example of an unprotected changeable token.
 
-After doing research, I learned about JSON Web Tokens (JWT). JWT is a standard token format that is often used for authentication and authorization purposes [14]. To improve the security of the token, I used JWT to encode the user ID with a token encryption key, as shown in the following example: `jwt.encode({'user_id': user_id}, token_encryption_key, algorithm='HS256')`. This encrypts the token as shown:
+After doing research, I learned about JSON Web Tokens (JWT). JWT is a standard token format that is often used for authentication and authorization purposes [14]. To improve the security of the token, I used JWT to encode the user ID with a token encryption key, as shown in the following example: 
+```.py
+jwt.encode({'user_id': user_id}, token_encryption_key, algorithm='HS256')`. 
+```
+
+This encrypts the token as shown:
 
 <img width="1070" alt="Screen Shot 2023-05-08 at 7 13 15 PM" src="https://user-images.githubusercontent.com/111751273/236798266-d22360f7-8781-48d6-8c00-d02db3a6951a.png">
-
 
 However, this method still has an issue. If the user's computer is compromised, a hacker could potentially reuse the encrypted cookie to gain unauthorized access. To solve this issue, I implemented tokens set to expire after a specific amount of time after the user logs in, using JWT along with the `dotenv` library for managing the encryption key. This involves adding both the user ID and an expiration date to the token. Here is the code I created:
 ```.py
@@ -268,10 +272,21 @@ if check_password(user_password=password, hashed_password=hash):
     return redirect("/")
 ```
 
-As a result, even if an attacker gains access to the token, it will eventually become invalid. This solution effectively addresses the authorization issue and enhances the security of the website. 
+As a result, even if an attacker gains access to the token, it will eventually become invalid. 
+
+To ensure that only authorized users can access certain parts of the website, I created a decorator function called `token_required(f)`. This function checks if the user's token is still valid (not expired or tampered with). Here is a snippet of this function:
+```.py
+if 'token' not in session:
+    return redirect(url_for('login'))
+try:
+    data = jwt.decode(session['token'], token_key, algorithms=['HS256'])
+except:
+    return redirect(url_for('login'))
+```
+This function first checks if the 'token' key exists in the session. If not, the user is redirected to the login page. Next, a `try` block attempts to decode the token using `jwt.decode()`. If the token is valid, it will allow the user to proceed within the website that requires authorization, if the token is invalid, expired, or tampered with, the user is redirected to the login page. This solution effectively addresses the authorization issue and enhances the security of the web application. 
 
 
-### Success Criteria 2: Users should be able to post posts of different categories such as: Announcements,  Book Reviews, and Discussions, and be able to edit/delete their posts and comments
+### Post Categorization (Success Criteria: 2)
 In order to meet my clients need of users being able to post posts of different categories, I implemented the following code to enable users to create a post with a specified category:
 
 ```.py
@@ -297,22 +312,23 @@ To get the post category shown in the code above from earlier, I implemented a f
 </select>
 ```
 
-### Edit Post/Comment
+### Edit Post/Comment (Success Criteria: 2)
 While developing this edit post and comment feature, I followed the steps I took to allow users create posts and comments. I was able to meet my client's needs by just creating a new function and query. Editting a post/comment is basically inserting a "new" post/comment into an already existing post/comment. I followed the exact same steps for editting comments and the only differences were the names of variables. For example, here is a code snippet for editting posts:
 ```.py
 post = db.search(f"SELECT * FROM posts WHERE id = {post_id}")
 ```
-In this code,  I am using the `db.search()` function to query the SQLite database and retrieve a specific post based on its `post_id`. 
+In this code,  I am using the `db.search()` function to query the SQLite database and retrieve a specific post based on its `post_id` from the "posts" table. 
 
 After the post is located, the owner of the post is redirected to the edit_post page, which is the same as the page shown when they were creating their post, however all the text fields, such as the title, category, content, are already filled out. This allows them to make the desired changes, and after they hit save changes, the database should update with the new edits to their post. Here is the edit query that I created:
+
 ```.py
 query = f"UPDATE posts SET title='{title}', category='{category}', content='{content}', image_name='{image_name}' WHERE id={post_id}"
 db.run_save(query)
 ```
-This is similar to the query from creating posts, however this query is updating the existing post values into its row from the located `post_id`.
+This is similar to the query from creating posts, however this query uses the `UPDATE` and `SET` to insert the new values into existing post values.
 
-### Delete Post/Comment
-To also fulfill my client's requirement of being able to delete posts and comment, I created a function that removes the post/comment from the database.
+### Delete Post/Comment (Success Criteria: 2)
+To also fulfill my client's requirement of being able to delete posts and comment, I created a function that removes chosen posts/comments from the database. Below shows the function that deletes posts. This method is also used to delete comments as well.
 ```.py
 def delete_post(post_id):
     db = database_worker("shelfshare.db")
@@ -320,6 +336,7 @@ def delete_post(post_id):
     db.run_save(query=delete_post)
     return redirect('/profile')
 ```
+Within this function, I first establish a connection to the SQLite database "shelfshare.db", where all user posts and comments are stored. Next, I created a query that deletes 
 
         
 
