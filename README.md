@@ -13,13 +13,13 @@ As a School X book club member, I've observed the absence of a dedicated social 
 
 2. *[Issue tackled: 1. “they don't offer a focused space for our school's book club to share reviews, discussions, or event announcements" 2. "Users can't edit/delete posts or comments”]* Users should be able to post posts of different categories such as: Announcements,  Book Reviews, and Discussions, and be able to edit/delete their posts and comments
 
-3. *[Issue tackled: "discovering popular content is challenging due to the presence of numerous less-liked or disliked posts."]* Implement a filtering or sorting mechanism that allows users to easily discover and view highly-liked or popular posts.
+3. *[Issue tackled: “upload desired images”]* The platform will allow users to upload images in their posts.
 
 4. *[Issue tackled: "or even see past posts they have liked"]* Users will be able to see all posts they have liked in the past.
 
 5. *[Issue: tackled: “As there are many different post categories, it is hard to locate specific posts.”]* The platform will allow the user to select what kind of posts they would like to view by category.
 
-6. *[Issue tackled: “upload desired images”]* The platform will allow users to upload images in their posts.
+6. *[Issue tackled: "discovering popular content is challenging due to the presence of numerous less-liked or disliked posts."]* Implement a filtering or sorting mechanism that allows users to easily discover and view highly-liked or popular posts.
 
 ## Design Statement
 I will design and develop a website for my school’s book club. This website will be developed using HTML, Bootstrap CSS, Python, SQLite, and the Flask framework. It will take approximately 3 weeks to develop and will be evaluated based on the given criteria.
@@ -203,9 +203,8 @@ The class shown in the UML Diagram is responsible for handling database interact
 ```.py
 if '@schoolx.edu' not in email:
     flash(("Invalid email address, not a 'School X email.", 'danger'))
-    print("Invalid email address, not a 'School X email.")
 ```
-My client wanted to create a social network platform exclusively for members of School X's book club. To achieve this, I needed to ensure that only students from School X could register using their school email addresses. To solve this problem, I used a basic yet effective 'if' statement in Python to verify if the user is attempting to register with a School X email address or not as shown in the code snippet above. Further, when a user tries to register with an email thats not from School X, I made an error pop up message to remind the user that they need to register with a School X email.
+My client wanted to create a social network platform exclusively for members of School X's book club. To achieve this, I needed to ensure that only students from School X could register using their school email addresses. To solve this problem, I used a basic yet effective 'if' statement in Python to verify if the user is attempting to register with a School X email address or not as shown in the code above. Further, when a user tries to register with an email that is not from School X, I made an error flash pop up message to remind the user that they need to register with a School X email.
 
 ### Country Selection
 ```.html
@@ -240,11 +239,13 @@ With the flag function created and the "flag-icons" library integrated, I needed
 ```.py
 app.jinja_env.filters['flag'] = flag
 ```
+By registering the function as a filter, it became accessible in the Jinja2 templates, allowing me to use it to convert the country names to their respective two-letter codes.
 
 In the HTML template, I then used the following line to display the user's country along with the corresponding flag icon:
 ```.html
 <h6 class="card-subtitle mb-2">Country: <span class="fi fi-{{ user[3] | flag }}"></span> {{ user[3] }}</h6>
 ```
+In this line, the `user[3] | flag` part utilizes the custom `flag` filter to convert the country name stored in `user[3]` from the database to the appropriate two-letter code. This effectively displayed the correct flag next to the country name in the user profile and successfully addressed the client's request for a more visually appealing representation of the user's country.
 
 ### Token Encryption
 While developing the website for my client, I realized that the website had lacked user authorization. Meaning anyone could access the web application wihtout having to actually register. To solve this I tried using cookies for identification purposes. However, it is essential to make sure that these cookies are protected. Simply assigning a user ID to a session, such as session['token'] = user_id, is not a secure practice. This is because a user could easily access their browser's inspector and modify the user ID to gain unauthorized access. Here is an example of an unprotected changeable token:
@@ -271,11 +272,56 @@ As a result, even if an attacker gains access to the token, it will eventually b
 
 
 ### Success Criteria 2: Users should be able to post posts of different categories such as: Announcements,  Book Reviews, and Discussions, and be able to edit/delete their posts and comments
+In order to meet my clients need of users being able to post posts of different categories, I implemented the following code to enable users to create a post with a specified category:
 
+```.py
+if request.method == 'POST':
+  title = request.form['title']
+  category = request.form['category']
+  content = request.form['content']
+  user_id = current_user['user_id']
+  create_post = (f"INSERT INTO posts (title, category, content, datetime, image_name, user_id) VALUES ('{title}', '{category}', '{content}', '{datetime.now()}', '{filename}','{user_id}')")
+  db.run_save(query=create_post)
 
+  return redirect(url_for('index'))
+```
+When a user submits a new post, the Flask application receives a POST request containing the post's title, category, content, and any attached image. The `request.form` is used to extract this information, and the user's ID is obtained from the `current_user` dictionary. Next, I constructed a SQL query to insert the new post into the "posts" table in the SQLite database. The query includes the title, category, content, current date and time, filename of the image, and user ID. The `db.run_save()` function is then used to execute the query and save the new post to the database. Finally, the user is redirected back to the index page, where they can see their newly created post. I also followed this method for allowing users to post comments and edit their posts/comments. 
 
+To get the post category shown in the code above from earlier, I implemented a feature that enables users to post posts of categories, such as Announcements, Book Reviews, and Discussions, meeting my clients needs. I was able to do this by using the HTML `select` element and `option` elements for each of the desired categories. I set the `required` attribute on the `select` element to make sure all users select a post category before posting. If no category is selected, the post will not post and a built-in warning message will prompt the user to select their post category. The chosen category is then retrieved from the user's selection and inserted into the database as demonstrated in the earlier code. This can be see from the code shown below:
 
+```.html
+<select class="form-select" aria-label="Default select example" name="category" required>
+    <option value="" selected disabled>Select Category</option>
+    <option value="Announcement">Announcement</option>
+    <!-- rest of post categories -->
+</select>
+```
 
+### Edit Post/Comment
+While developing this edit post and comment feature, I followed the steps I took to allow users create posts and comments. I was able to meet my client's needs by just creating a new function and query. Editting a post/comment is basically inserting a "new" post/comment into an already existing post/comment. I followed the exact same steps for editting comments and the only differences were the names of variables. For example, here is a code snippet for editting posts:
+```.py
+post = db.search(f"SELECT * FROM posts WHERE id = {post_id}")
+```
+In this code,  I am using the `db.search()` function to query the SQLite database and retrieve a specific post based on its `post_id`. 
+
+After the post is located, the owner of the post is redirected to the edit_post page, which is the same as the page shown when they were creating their post, however all the text fields, such as the title, category, content, are already filled out. This allows them to make the desired changes, and after they hit save changes, the database should update with the new edits to their post. Here is the edit query that I created:
+```.py
+query = f"UPDATE posts SET title='{title}', category='{category}', content='{content}', image_name='{image_name}' WHERE id={post_id}"
+db.run_save(query)
+```
+This is similar to the query from creating posts, however this query is updating the existing post values into its row from the located `post_id`.
+
+### Delete Post/Comment
+To also fulfill my client's requirement of being able to delete posts and comment, I created a function that removes the post/comment from the database.
+```.py
+def delete_post(post_id):
+    db = database_worker("shelfshare.db")
+    delete_post = f"DELETE FROM posts WHERE id = {post_id}"
+    db.run_save(query=delete_post)
+    return redirect('/profile')
+```
+
+        
 
 
 # Criteria D: Functionality
