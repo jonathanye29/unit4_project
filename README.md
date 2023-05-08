@@ -43,6 +43,8 @@ _Word Count_: **491**
 
 <i>Fig. 2</i> This is the system diagram for the proposed solution
 
+It serves as a visual representation of the system and its components, and their relationships to each other. As shown above, the web application will be programmed in python, and all information will be stored in the SQLite database. The application will have various inputs from the user, which will then output onto their screen.
+
 ## Flow Diagram
 ### Login System
 ![u4flowchart1 (1)](https://user-images.githubusercontent.com/111751273/236664876-93241420-14ad-49cd-94b9-b869e724d9db.png)
