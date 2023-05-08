@@ -511,7 +511,7 @@ Through this method, I was able to successfully meet my client's requirement of 
 <i>Fig A. 2</i> Client's approval of all success criterias and development plan after meeting.(Disclaimer: Mailer and recipient names kept confidential for privacy purposes)
 
 <img width="1158" alt="Screen Shot 2023-05-09 at 5 01 43 AM" src="https://user-images.githubusercontent.com/111751273/236922415-1f344990-3e15-47ac-a345-2d27f86c7706.png">
-<i>Fig A. 3</i>Client's approval of all the current state of the web applications development after meeting. (Disclaimer: Mailer and recipient names kept confidential for privacy purposes)
+<i>Fig A. 3</i> Client's approval of all the current state of the web applications development after meeting. (Disclaimer: Mailer and recipient names kept confidential for privacy purposes)
 
 
 
