@@ -253,7 +253,9 @@ In the HTML template, I then used the following line to display the user's count
 In this line, the `user[3] | flag` part utilizes the custom `flag` filter to convert the country name stored in `user[3]` from the database to the appropriate two-letter code. This effectively displayed the correct flag next to the country name in the user profile and successfully addressed the client's request for a more visually appealing representation of the user's country.
 
 <img width="986" alt="Screen Shot 2023-05-08 at 10 49 19 PM" src="https://user-images.githubusercontent.com/111751273/236841443-e2df76b1-96f7-42ee-b2ef-ded8e557570a.png">
-
+<p align="center">
+  <i>(Disclaimer: The data presented is fictional and does not depict real comments or authors)</i>
+</p>
 
 ### Token Encryption
 While developing the website for my client, I realized that the website had lacked user authorization. Meaning anyone could access the web application wihtout having to actually register. To solve this I tried using cookies for identification purposes. However, it is essential to make sure that these cookies are protected. Simply assigning a user ID to a session, such as `session['token'] = user_id`, is not a secure practice. This is because a user could easily access their browser's inspector and modify the user ID to gain unauthorized access. Here is an example of an unprotected changeable token:
