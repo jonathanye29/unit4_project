@@ -133,7 +133,7 @@ The class shown in the UML Diagram is responsible for handling database interact
 2	|Planning: Brainstorm and write the design statement	|	A clear design statement that details the plan and tools that will be used to resolve the problem being faced.	|	10 mins.	|	05/04/2023	|	A
 3	|	Planning: Rationale for Proposed Solution	|	A clear justification that suits the client and developer.	|	20 mins.	|	10/04/2023	|	A
 4	|	Planning: Brainstorm and write down success criteria		|	A clear success criteria that suits the client and resolves the problem	|	20 mins.	|	10/04/2023	|	A
-5	|	Design: Create system diagram  	|	To have a clear idea of the hardware and software requirements for the proposed solution	|	45 minutes	|	13/04/2023	|	B
+5	|	Design: Create system diagram  	|	Have a clear idea of the hardware and software requirements for the proposed solution	|	45 minutes	|	13/04/2023	|	B
 6	|	Design: Draw a wire frame and write an explanation of it	|	Have a clear wire frame that accurately represents and describes the application and have a brief explanation	|	30 mins.	|	13/04/2023	|	B
 7	|	Design: Create flow diagrams and write brief explanations for each  	|	Have accurate flow diagrams for different parts of the program with brief explanations	|	1 hour	|	14/04/2023	|	B
 8	|	Design: Draw an ER diagram and write a breif explanation of it|	A clear and organized visual representation of the data structure for the ShelfShare network with a brief explanation	|	45 minutes        	|	14/04/2023	|	B
@@ -143,10 +143,10 @@ The class shown in the UML Diagram is responsible for handling database interact
 12	|	Development: Code a login and registration system	|	Create a program that allows the user to register and login to the application using a username and password they set up	|	1 hour	|	17/04/2023	|	C
 13	|	Development: Code password encryption	|	Using 'sha256' to encrypt password and check password in login and registration	|	45 minutes	|	17/04/2023	|	C
 14	|	Development: Code a password policy	|	Have a policy where when the user creates an account, their password must have a minimum of 8 characters	|	15 minutes	|	17/04/2023	|	C
-15	|	Development: Create table for users in database	|	To have a table inside the database that includes all registered users' information (full name, email address, country, username, encrypted password)	|	5 minutes	|	17/04/2023	|	C
-16	|	Development: Create table for posts in database	|	To have a table inside the database that includes all posted posts and the content that it contains (Title, Category, Content, Author, Datetime)	|	5 minutes	|	17/04/2023	|	C
-17	|	Development: Create table for comments in database	|	To have a table inside the database that includes all posted comments and the content that it contains (Content, Author, Datetime)	|	5 minutes	|	17/04/2023	|	C
-18	|	Development: Create table for likes in database	|	To have a table inside the database that includes all likes from users and the liked post	|	5 minutes	|	17/04/2023	|	C
+15	|	Development: Create table for users in database	|	Have a table inside the database that includes all registered users' information (full name, email address, country, username, encrypted password)	|	5 minutes	|	17/04/2023	|	C
+16	|	Development: Create table for posts in database	|	Have a table inside the database that includes all posted posts and the content that it contains (Title, Category, Content, Author, Datetime)	|	5 minutes	|	17/04/2023	|	C
+17	|	Development: Create table for comments in database	|	Have a table inside the database that includes all posted comments and the content that it contains (Content, Author, Datetime)	|	5 minutes	|	17/04/2023	|	C
+18	|	Development: Create table for likes in database	|	Have a table inside the database that includes all likes from users and the liked post	|	5 minutes	|	17/04/2023	|	C
 19	|	Development: Code the login page	|	Have a working page for login on the website	|	20 minutes	|	17/04/2023	|	C
 20	|	Development: Code the registration page	|	Have a working page for registration on the website	|	20 minutes	|	17/04/2023	|	C
 21	|	Development: Code the base HTML template	|	Have a base.html template that will be used to extend to all other templates to complete the web application	|	10 minutes	|	17/04/2023	|	C
@@ -164,14 +164,14 @@ The class shown in the UML Diagram is responsible for handling database interact
 33	|	Development: Code the delete function	|	Have a functional program that allows users to delete their own account, posts and comments	|	15 minutes	|	21/04/2023	|	C
 34	|	Development: Code the logout system	|	Have a functional program that allows users to log out of their accounts	|	10 minutes	|	21/04/2023	|	C
 35	|	Development: Code the upload image function	|	Have a functional program that allows the users to upload desired images in their posts	|	1 hour	|	25/04/2023	|	C
-36	|	Planning: Third meeting with client	|	Showing the application to the client and to ask for their opinion on the applications current progress	|	15 minutes	|	25/04/2023	|	A
+36	|	Planning: Third meeting with client	|	Show the application to the client and to ask for their opinion on the applications current progress	|	15 minutes	|	25/04/2023	|	A
 37	|	Development: Code the country flag displayment	|	Have a functional program that shows the users country flag in their profile	|	1 hour 15 minutes	|	25/04/2023	|	C
 38	|	Development: Code the like post function	|	Have a functional program that allows the users to like and unlike posts	|	25 minutes	|	26/04/2023	|	C
 39	|	Development: Code the popular posts filter function	|	Have a functional program that filters posts by the amount of likes they have (most liked to least liked, vice versa)	|	1 hour	|	26/04/2023	|	C
 40	|	Development: Code the tab icon for web application	|	Have a functional program that displays the social networks logo on the tab of the web application	|	30 minutes	|	26/04/2023	|	C
-41	|	Development: Cleaning up the Code	|	Going back and reviewing the code to correctly format and remove unused code 	|	1 hour 30 minutes	|	27/04/2023	|	C
-42 | Implementation: Get Client Evaluation on the Web Application | To have the website evaluated by the client and the subsequent evidence documented | 1 hour | 06/05/2023 | E 
-43 | Implementation: Get Peer Evaluation on the Web Application | To have the website evaluated by the client and the subsequent evidence documented | 1 hour | 07/05/2023 | E
+41	|	Development: Cleaning up the Code	|	Review the code to correctly format and remove unused code 	|	1 hour 30 minutes	|	27/04/2023	|	C
+42 | Implementation: Get Client Evaluation on the Web Application | Have the website evaluated by the client and the subsequent evidence documented | 1 hour | 06/05/2023 | E 
+43 | Implementation: Get Peer Evaluation on the Web Application | Have the website evaluated by a peer and the subsequent evidence documented | 1 hour | 07/05/2023 | E
 44 | Implementation: Evaluate the recommendations given from both the client and peer | Take in and review the recommendations from both evaluations on how the website can be improved and document them properly | 20 minutes | 07/05/2023 | E 
 
 
