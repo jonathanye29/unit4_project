@@ -19,7 +19,7 @@ As a School X book club member, I've observed the absence of a dedicated social 
 
 5. *[Issue: tackled: “As there are many different post categories, it is hard to locate specific posts.”]* The platform will allow the user to select what kind of posts they would like to view by category.
 
-6. *[Issue tackled: "discovering popular content is challenging due to the presence of numerous less-liked or disliked posts."]* Implement a filtering feature that allows users to view the top liked posts.
+6. *[Issue tackled: "discovering popular content is challenging due to the presence of numerous less-liked or disliked posts."]* Implement a sorting feature that allows users to view the top liked posts.
 
 ## Design Statement
 I will design and develop a website for my school’s book club. This website will be developed using HTML, Bootstrap CSS, Python, SQLite, and the Flask framework. It will take approximately 3 weeks to develop and will be evaluated based on the given criteria.
@@ -498,6 +498,8 @@ The script first uses `document.querySelector('#sort')` to select the dropdown m
 Through this method, I was able to successfully meet my client's requirement of having a sorting feature in the web application.
 
 # Criteria D: Functionality
+https://github.com/jonathanye29/unit4_project/assets/111751273/52c83de5-29ae-4e6b-a2de-8a935e03a2ba
+
 
 # Criteria E: Evaluation
 ## Evaluation by Client
