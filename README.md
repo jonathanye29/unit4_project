@@ -65,7 +65,7 @@ This method handles the creation of a new post. It first checks for an image in 
 This method handles the process of liking or unliking a post. It first decodes the user's token to get their user ID. Then, it checks if a like record exists in the database for the given user and post. If the record exists, it deletes the like (unlike). If not, it creates a new like record. Finally, it redirects the user back to the post.
 
 ## UML Diagram
-![u4UML](https://user-images.githubusercontent.com/111751273/236673274-82e87354-2d09-423a-a62d-0baaf5b2ff90.png)
+![u4UML (1)](https://user-images.githubusercontent.com/111751273/236996435-2f067243-d3c8-4321-bc14-9fcc704b8220.png)
 
 <i>Fig. 6</i> This is the UML diagram for the social network.
 
