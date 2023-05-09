@@ -139,7 +139,7 @@ The class shown in the UML Diagram is responsible for handling database interact
 8	|	Draw an ER diagram and write a breif explanation of it|	A clear and organized visual representation of the data structure for the ShelfShare network with a brief explanation	|	45 minutes        	|	14/04/2023	|	B
 9	|	Create UML Diagram and write a brief description 	|	Have a clear UML Diagram that accurately shows the different classes and methods used with a brief explanation	|	30 minutes	|	15/04/2023	|	B
 10	|	Write the test plans	|	Procedures that should be taken to test the program and the expected outcome of each test is recorded	|	1 hour	|	17/04/2023	|	B
-11	|	Follow up meeting with client	|	Present success criterias and development plan to client and get the approval	|	20 minutes	|	17/04/2023	|	A
+11	|	Follow up meeting with client	|	Present success criterias and development plan to client and get the approval |	20 minutes	|	17/04/2023	|	A
 12	|	Code a login and registration system	|	Create a program that allows the user to register and login to the application using a username and password they set up	|	1 hour	|	17/04/2023	|	C
 13	|	Code password encryption	|	Using 'sha256' to encrypt password and check password in login and registration	|	45 minutes	|	17/04/2023	|	C
 14	|	Code a password policy	|	Have a policy where when the user creates an account, their password must have a minimum of 8 characters	|	15 minutes	|	17/04/2023	|	C
@@ -226,7 +226,7 @@ As the client's bookclub is part of an international school, I thought it would 
 
 
 ### Country Flag
-Following the third meeting with my client, they expressed a desire to enhance the country representation on the web application. Previously, the user's country was only displayed as text in their profile. I suggested incorporating the country's flag alongside the text for a more visually appealing presentation, and the client was pleased with this idea. This was a challenge for me because it required converting country names to their respective two-letter codes, fetching the appropriate flag images, and seamlessly integrating them into the existing design of the user profiles. However, after doing research, I was able to learn how to utilize the `pycountry` library, which provides a convenient way to access country information [15].
+Following the third meeting with my client, they expressed a desire to enhance the country representation on the web application (See Fig A. 3 in<a href="https://github.com/jonathanye29/unit4_project#evidence-of-consultation">). Previously, the user's country was only displayed as text in their profile. I suggested incorporating the country's flag alongside the text for a more visually appealing presentation, and the client was pleased with this idea. This was a challenge for me because it required converting country names to their respective two-letter codes, fetching the appropriate flag images, and seamlessly integrating them into the existing design of the user profiles. However, after doing research, I was able to learn how to utilize the `pycountry` library, which provides a convenient way to access country information [15].
 
 ```.py
 def flag(country):
@@ -507,6 +507,10 @@ Through this method, I was able to successfully meet my client's requirement of 
 | The platform will allow the user to select what kind of posts they would like to view by category.   | Yes  | The platform's navigation bar allows users to view posts by category, making it easier to locate specifc posts. |
 | Implement a filtering feature that allows users to view the top liked posts.  | Yes  | The web application has a filter feature that allows posts to be sorted by 'Top Liked', allowing users to easily discover the most popular content. In addition, the web application by default sorts all posts by the 'Latest'. |
 
+The client expresses high satisfaction with the developed web application, expressing that it effectively addresses all the outlined success criteria (See Fig A. 4 in <a href="https://github.com/jonathanye29/unit4_project#evidence-of-consultation"). During the evaluation, the client offered valuable feedback like suggesting the addition of visible like counts on each post to provide more immediate feedback to the user community. Having the amount of likes shown can allow users to see the difference in the amounts of likes each post has.
+
+
+
 
 # Works cited
 1. “Trending Dreams | Deep Dream Generator.” Deepdreamgenerator.com, 2023, deepdreamgenerator.com/. Accessed 2 Apr. 2023.
@@ -542,7 +546,7 @@ Through this method, I was able to successfully meet my client's requirement of 
 <i>Fig A. 3</i> Client's approval of all the current state of the web applications development after meeting. (Disclaimer: Mailer and recipient names kept confidential for privacy purposes)
 
 <img width="1176" alt="Screen Shot 2023-05-09 at 7 14 27 PM" src="https://github.com/jonathanye29/unit4_project/assets/111751273/cf325c12-ed07-4207-b93a-a3831d8579b3">
-<Fig A. 4</i> Client's evaluation of the web application</i>
+<i>Fig A. 4</i> Client's evaluation of the web application</i>
 
 
 
