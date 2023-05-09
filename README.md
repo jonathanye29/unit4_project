@@ -39,8 +39,7 @@ _Word Count_: **491**
 
 # Criteria B: Design
 ## System Diagram
-![jojojojojojo (2)](https://user-images.githubusercontent.com/111751273/236675657-0ace4df1-aedc-4d44-9181-fc2a45cd81cd.png)
-
+![jojojojojojo (1)](https://user-images.githubusercontent.com/111751273/237012197-ce8c23c8-a841-45a1-b99c-7ed8808a70c8.png)
 <i>Fig. 2</i> This is the system diagram for the proposed solution
 
 It serves as a visual representation of the system and its components, and their relationships to each other. As shown above, the web application will be programmed in python, and all information will be stored in the SQLite database. The application will have various inputs from the user, which will then output onto their screen.
