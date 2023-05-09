@@ -129,50 +129,50 @@ The class shown in the UML Diagram is responsible for handling database interact
 ## Record of Tasks
 |Task No	|	Planned Action	|	Planned Outcome	|	Time estimate	|	Target completion date	|	Criterion 
 ----------|------------|---------------|---------------|----------------|----------
-1	|	"Brainstorm and write the problem definition	"	|	A clear description of the problem currently being faced.	|	15 mins.	|	05/04/2023	|	A
-2	|	"Brainstorm and write the design statement	"	|	A clear design statement that details the plan and tools that will be used to resolve the problem being faced.	|	10 mins.	|	05/04/2023	|	A
-3	|	Rationale for Proposed Solution	|	A clear justification that suits the client and developer.	|	20 mins.	|	10/04/2023	|	A
-4	|	"Brainstorm and write down success criteria	"	|	A clear success criteria that suits the client and resolves the problem	|	20 mins.	|	10/04/2023	|	A
-5	|	Create system diagram  	|	To have a clear idea of the hardware and software requirements for the proposed solution	|	45 minutes	|	13/04/2023	|	B
-6	|	Draw a wire frame and write an explanation of it	|	Have a clear wire frame that accurately represents and describes the application and have a brief explanation	|	30 mins.	|	13/04/2023	|	B
-7	|	Create flow diagrams and write brief explanations for each  	|	Have accurate flow diagrams for different parts of the program with brief explanations	|	1 hour	|	14/04/2023	|	B
-8	|	Draw an ER diagram and write a breif explanation of it|	A clear and organized visual representation of the data structure for the ShelfShare network with a brief explanation	|	45 minutes        	|	14/04/2023	|	B
-9	|	Create UML Diagram and write a brief description 	|	Have a clear UML Diagram that accurately shows the different classes and methods used with a brief explanation	|	30 minutes	|	15/04/2023	|	B
-10	|	Write the test plans	|	Procedures that should be taken to test the program and the expected outcome of each test is recorded	|	1 hour	|	17/04/2023	|	B
-11	|	Follow up meeting with client	|	Present success criteria and development plan to client and get the approval (see Fig A. 2 in <a href="https://github.com/jonathanye29/unit4_project#evidence-of-consultation">Evidence of Consultation</a> in Appendix)|	20 minutes	|	17/04/2023	|	A
-12	|	Code a login and registration system	|	Create a program that allows the user to register and login to the application using a username and password they set up	|	1 hour	|	17/04/2023	|	C
-13	|	Code password encryption	|	Using 'sha256' to encrypt password and check password in login and registration	|	45 minutes	|	17/04/2023	|	C
-14	|	Code a password policy	|	Have a policy where when the user creates an account, their password must have a minimum of 8 characters	|	15 minutes	|	17/04/2023	|	C
-15	|	Create table for users in database	|	To have a table inside the database that includes all registered users' information (full name, email address, country, username, encrypted password)	|	5 minutes	|	17/04/2023	|	C
-16	|	Create table for posts in database	|	To have a table inside the database that includes all posted posts and the content that it contains (Title, Category, Content, Author, Datetime)	|	5 minutes	|	17/04/2023	|	C
-17	|	Create table for comments in database	|	To have a table inside the database that includes all posted comments and the content that it contains (Content, Author, Datetime)	|	5 minutes	|	17/04/2023	|	C
-18	|	Create table for likes in database	|	To have a table inside the database that includes all likes from users and the liked post	|	5 minutes	|	17/04/2023	|	C
-19	|	Code the login page	|	Have a working page for login on the website	|	20 minutes	|	17/04/2023	|	C
-20	|	Code the registration page	|	Have a working page for registration on the website	|	20 minutes	|	17/04/2023	|	C
-21	|	Code the base HTML template	|	Have a base.html template that will be used to extend to all other templates to complete the web application	|	10 minutes	|	17/04/2023	|	C
-22	|	Code the homepage of the web application	|	Have the layout of the homepage completed and on the website	|	20 minutes	|	18/04/2023	|	C
-23	|	Code the page for each post category (Announcements, Reminders, Book Recommendatrions, Book Reviews, Discussions, Reminders)	|	Have the layout for each category page completed and shown on the website 	|	30 minutes	|	18/04/2023	|	C
-24	|	Code the button and route functionality for the homepage	|	Each element shown on the homepage redirects to the assigned page (eg. Announcement button goes to Announcement Page)	|	20 minutes	|	18/04/2023	|	C
-25	|	Implement token-based authentication	|	Develop a secure token-based authentication system using JWT for protecting login required routes	|	2 hours	|	19/04/2023	|	C
-26	|	Code the create_post page	|	Have a page that shows the layout of creating a post	|	15 minutes	|	19/04/2023	|	C
-27	|	Code profile page	|	Have a page that shows the current users profile with their information (Name, Username, Email, Country, all their posts, comments and liked posts )	|	45 minutes	|	19/04/2023	|	C
-28	|	Code create post functionality	|	Have the create post page work with the code to allow the user to create a post and save it to the database	|	20 minutes	|	20/04/2023	|	C
-29	|	Code to display posts on all pages	|	Develop functionality to display all posts on the homepage and show specific category posts on their respective category pages	|	45 minutes	|	20/04/2023	|	C
-30	|	Code the edit post function	|	Have a functional program that allows the user to edit their own posts which updates to the database	|	30 minutes	|	20/04/2023	|	C
-31	|	Code comment feature	|	Have a program that allows the user to post comments on their own and others posts	|	45 minutes	|	21/04/2023	|	C
-32	|	Code the edit comment feature	|	Have a functional program that allows the user to edit their own comments which updates to the database	|	20 minutes	|	21/04/2023	|	C
-33	|	Code the delete function	|	Have a functional program that allows users to delete their own account, posts and comments	|	15 minutes	|	21/04/2023	|	C
-34	|	Code the logout system	|	Have a functional program that allows users to log out of their accounts	|	10 minutes	|	21/04/2023	|	C
-35	|	Code the upload image function	|	Have a functional program that allows the users to upload desired images in their posts	|	1 hour	|	25/04/2023	|	C
-36	|	Third meeting with client	|	Showing the application to the client and to ask for their opinion on the applications current progress	|	15 minutes	|	25/04/2023	|	A
-37	|	Code the country flag displayment	|	Have a functional program that shows the users country flag in their profile	|	1 hour 15 minutes	|	25/04/2023	|	C
-38	|	Code the like post function	|	Have a functional program that allows the users to like and unlike posts	|	25 minutes	|	26/04/2023	|	C
-39	|	Code the popular posts filter function	|	Have a functional program that filters posts by the amount of likes they have (most liked to least liked, vice versa)	|	1 hour	|	26/04/2023	|	C
-40	|	Code the tab icon for web application	|	Have a functional program that displays the social networks logo on the tab of the web application	|	30 minutes	|	26/04/2023	|	C
-41	|	Cleaning up the Code	|	Going back and reviewing the code to correctly format and remove unused code 	|	1 hour 30 minutes	|	27/04/2023	|	C
-42 | Get Client Evaluation on the Web Application | To have the website evaluated by the client and the subsequent evidence documented | 1 hour | 06/05/2023 | E 
-43 | Get Peer Evaluation on the Web Application | To have the website evaluated by the client and the subsequent evidence documented | 1 hour | 07/05/2023 | E
-44 | Evaluate the recommendations given from both the client and peer | Take in and review the recommendations from both evaluations on how the website can be improved and document them properly | 20 minutes | 07/05/2023 | E 
+1	|	Planning: Brainstorm and write the problem definition |	A clear description of the problem currently being faced.	|	15 mins.	|	05/04/2023	|	A
+2	|Planning: Brainstorm and write the design statement	|	A clear design statement that details the plan and tools that will be used to resolve the problem being faced.	|	10 mins.	|	05/04/2023	|	A
+3	|	Planning: Rationale for Proposed Solution	|	A clear justification that suits the client and developer.	|	20 mins.	|	10/04/2023	|	A
+4	|	Planning: Brainstorm and write down success criteria		|	A clear success criteria that suits the client and resolves the problem	|	20 mins.	|	10/04/2023	|	A
+5	|	Design: Create system diagram  	|	To have a clear idea of the hardware and software requirements for the proposed solution	|	45 minutes	|	13/04/2023	|	B
+6	|	Design: Draw a wire frame and write an explanation of it	|	Have a clear wire frame that accurately represents and describes the application and have a brief explanation	|	30 mins.	|	13/04/2023	|	B
+7	|	Design: Create flow diagrams and write brief explanations for each  	|	Have accurate flow diagrams for different parts of the program with brief explanations	|	1 hour	|	14/04/2023	|	B
+8	|	Design: Draw an ER diagram and write a breif explanation of it|	A clear and organized visual representation of the data structure for the ShelfShare network with a brief explanation	|	45 minutes        	|	14/04/2023	|	B
+9	|	Design: Create UML Diagram and write a brief description 	|	Have a clear UML Diagram that accurately shows the different classes and methods used with a brief explanation	|	30 minutes	|	15/04/2023	|	B
+10	|	Design: Write the test plans	|	Procedures that should be taken to test the program and the expected outcome of each test is recorded	|	1 hour	|	17/04/2023	|	B
+11	|	Planning: Follow up meeting with client	|	Present success criteria and development plan to client and get the approval (see Fig A. 2 in <a href="https://github.com/jonathanye29/unit4_project#evidence-of-consultation">Evidence of Consultation</a> in Appendix)|	20 minutes	|	17/04/2023	|	A
+12	|	Development: Code a login and registration system	|	Create a program that allows the user to register and login to the application using a username and password they set up	|	1 hour	|	17/04/2023	|	C
+13	|	Development: Code password encryption	|	Using 'sha256' to encrypt password and check password in login and registration	|	45 minutes	|	17/04/2023	|	C
+14	|	Development: Code a password policy	|	Have a policy where when the user creates an account, their password must have a minimum of 8 characters	|	15 minutes	|	17/04/2023	|	C
+15	|	Development: Create table for users in database	|	To have a table inside the database that includes all registered users' information (full name, email address, country, username, encrypted password)	|	5 minutes	|	17/04/2023	|	C
+16	|	Development: Create table for posts in database	|	To have a table inside the database that includes all posted posts and the content that it contains (Title, Category, Content, Author, Datetime)	|	5 minutes	|	17/04/2023	|	C
+17	|	Development: Create table for comments in database	|	To have a table inside the database that includes all posted comments and the content that it contains (Content, Author, Datetime)	|	5 minutes	|	17/04/2023	|	C
+18	|	Development: Create table for likes in database	|	To have a table inside the database that includes all likes from users and the liked post	|	5 minutes	|	17/04/2023	|	C
+19	|	Development: Code the login page	|	Have a working page for login on the website	|	20 minutes	|	17/04/2023	|	C
+20	|	Development: Code the registration page	|	Have a working page for registration on the website	|	20 minutes	|	17/04/2023	|	C
+21	|	Development: Code the base HTML template	|	Have a base.html template that will be used to extend to all other templates to complete the web application	|	10 minutes	|	17/04/2023	|	C
+22	|	Development: Code the homepage of the web application	|	Have the layout of the homepage completed and on the website	|	20 minutes	|	18/04/2023	|	C
+23	|	Development: Code the page for each post category (Announcements, Reminders, Book Recommendatrions, Book Reviews, Discussions, Reminders)	|	Have the layout for each category page completed and shown on the website 	|	30 minutes	|	18/04/2023	|	C
+24	|	Development: Code the button and route functionality for the homepage	|	Each element shown on the homepage redirects to the assigned page (eg. Announcement button goes to Announcement Page)	|	20 minutes	|	18/04/2023	|	C
+25	|	Development: Implement token-based authentication	|	Develop a secure token-based authentication system using JWT for protecting login required routes	|	2 hours	|	19/04/2023	|	C
+26	|	Development: Code the create_post page	|	Have a page that shows the layout of creating a post	|	15 minutes	|	19/04/2023	|	C
+27	|	Development: Code profile page	|	Have a page that shows the current users profile with their information (Name, Username, Email, Country, all their posts, comments and liked posts )	|	45 minutes	|	19/04/2023	|	C
+28	|	Development: Code create post functionality	|	Have the create post page work with the code to allow the user to create a post and save it to the database	|	20 minutes	|	20/04/2023	|	C
+29	|	Development: Code to display posts on all pages	|	Develop functionality to display all posts on the homepage and show specific category posts on their respective category pages	|	45 minutes	|	20/04/2023	|	C
+30	|	Development: Code the edit post function	|	Have a functional program that allows the user to edit their own posts which updates to the database	|	30 minutes	|	20/04/2023	|	C
+31	|	Development: Code comment feature	|	Have a program that allows the user to post comments on their own and others posts	|	45 minutes	|	21/04/2023	|	C
+32	|	Development: Code the edit comment feature	|	Have a functional program that allows the user to edit their own comments which updates to the database	|	20 minutes	|	21/04/2023	|	C
+33	|	Development: Code the delete function	|	Have a functional program that allows users to delete their own account, posts and comments	|	15 minutes	|	21/04/2023	|	C
+34	|	Development: Code the logout system	|	Have a functional program that allows users to log out of their accounts	|	10 minutes	|	21/04/2023	|	C
+35	|	Development: Code the upload image function	|	Have a functional program that allows the users to upload desired images in their posts	|	1 hour	|	25/04/2023	|	C
+36	|	Planning: Third meeting with client	|	Showing the application to the client and to ask for their opinion on the applications current progress	|	15 minutes	|	25/04/2023	|	A
+37	|	Development: Code the country flag displayment	|	Have a functional program that shows the users country flag in their profile	|	1 hour 15 minutes	|	25/04/2023	|	C
+38	|	Development: Code the like post function	|	Have a functional program that allows the users to like and unlike posts	|	25 minutes	|	26/04/2023	|	C
+39	|	Development: Code the popular posts filter function	|	Have a functional program that filters posts by the amount of likes they have (most liked to least liked, vice versa)	|	1 hour	|	26/04/2023	|	C
+40	|	Development: Code the tab icon for web application	|	Have a functional program that displays the social networks logo on the tab of the web application	|	30 minutes	|	26/04/2023	|	C
+41	|	Development: Cleaning up the Code	|	Going back and reviewing the code to correctly format and remove unused code 	|	1 hour 30 minutes	|	27/04/2023	|	C
+42 | Implementation: Get Client Evaluation on the Web Application | To have the website evaluated by the client and the subsequent evidence documented | 1 hour | 06/05/2023 | E 
+43 | Implementation: Get Peer Evaluation on the Web Application | To have the website evaluated by the client and the subsequent evidence documented | 1 hour | 07/05/2023 | E
+44 | Implementation: Evaluate the recommendations given from both the client and peer | Take in and review the recommendations from both evaluations on how the website can be improved and document them properly | 20 minutes | 07/05/2023 | E 
 
 
 # Criteria C: Development
