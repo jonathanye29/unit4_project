@@ -498,7 +498,8 @@ The script first uses `document.querySelector('#sort')` to select the dropdown m
 Through this method, I was able to successfully meet my client's requirement of having a sorting feature in the web application.
 
 # Criteria D: Functionality
-https://github.com/jonathanye29/unit4_project/assets/111751273/52c83de5-29ae-4e6b-a2de-8a935e03a2ba
+## Video of Web Application Functionality
+https://github.com/jonathanye29/unit4_project/assets/111751273/bc04e8a2-4f23-480b-a19e-ff9e2e77ac97
 
 
 # Criteria E: Evaluation
