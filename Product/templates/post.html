@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="col-md-11" style="padding-left: 100px">
+    <div class="card mb-3">
+        <div class="card-body">
+            <h3 class="card-title mb-1">{{ post[1] }}</h3>
+            <h5 class="card-subtitle mb-2 text-muted">[{{ post[2] }}]</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Post by: {{ post[-1] }}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Post date: {{ post[4]|parse_date }}</h6>
+            <hr>
+            <p class="card-text">{{ post[3] }}</p>
+            {% if is_liked %}
+                <form action="{{ url_for('like_post', post_id=post[0]) }}" method="POST">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-heart-fill"></i> Unlike
+                    </button>
+                </form>
+            {% else %}
+                <form action="{{ url_for('like_post', post_id=post[0]) }}" method="POST">
+                    <button type="submit" class="btn btn-outline-primary">
+                        <i class="bi bi-heart"></i> Like
+                    </button>
+                </form>
+            {% endif %}
+        </div>
+        {% if post[5] != 'None' %}
+            <img src="/file/{{ post[5] }}" class="img-fluid" alt="Responsive image" style="height: auto; width: 400px;">
+        {% endif %}
+        </div>
+    </div>
+<div class="col-md-11" style="padding-left: 100px">
+    {% if comments %}
+    <div class="card mb-3">
+        <div class="card-body">
+            <h4 class="card-title mb-1">Comments:</h4>
+            {% for comment in comments %}
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <h6 class="card-subtitle mb-2 ">{{ comment[2]|how_much_time_ago }}</h6>
+                        <p class="card-text">{{ comment[1] }}</p>
+                        <p class="card-text text-muted"> Comment by: {{ comment[-1] }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+<div class="card mb-3">
+<div class="card-body">
+    <h4 class="card-title mb-1">Add a Comment</h4>
+    <form action="{{ url_for('add_comment', post_id=post[0]) }}" method="POST">
+        <div class="form-group">
+            <textarea class="form-control mb-2" id="comment" name="comment" rows="3" required pattern="\S+"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-light">Submit</button>
+    </form>
+</div>
+</div>
+{% endblock %}
