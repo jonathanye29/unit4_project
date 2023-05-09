@@ -491,9 +491,10 @@ When the user selects an option, its `value` attribute will be used by JavaScrip
 The script first uses `document.querySelector('#sort')` to select the dropdown menu with the `id` "sort". It then assigns this HTML element to the constant variable `sortSelect`. Next, an event listener is added to `sortSelect` to listen for the 'change' event, which occurs when the user selects a different option from the dropdown menu. When the 'change' event is detected, an anonymous function is executed. Inside this function, the `value` property of the selected option is assigned to the constant variable `value`. A conditional statement then checks if `value` is equal to 'popular', which corresponds to the "Top Liked" option. If this condition is met, the script uses `window.location.href` to navigate the user to the '/top_liked' URL, where the posts are sorted according to the number of likes they have received.
 
 Through this method, I was able to successfully meet my client's requirement of having a sorting feature in the web application.
-  
+
 # Criteria D: Functionality
 
+# Criteria E: Evaluation
 
 # Works cited
 1. “Trending Dreams | Deep Dream Generator.” Deepdreamgenerator.com, 2023, deepdreamgenerator.com/. Accessed 2 Apr. 2023.
