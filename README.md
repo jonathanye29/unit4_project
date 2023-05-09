@@ -47,7 +47,7 @@ It serves as a visual representation of the system and its components, and their
 ## Flow Diagram
 
 ### Create Post
-![u4flowchart2 (1)](https://user-images.githubusercontent.com/111751273/236667550-dc0668e5-b174-4688-9e57-77e6a044b79c.png)
+![u4flowchart2 (2)](https://user-images.githubusercontent.com/111751273/237036048-3bf1ac40-ac73-4e17-957b-008970effe3e.png)
 <i>Fig. 3</i> This is the flow diagram that details the process of how the posts are created.
 
 This function handles the creation of a new post. It first checks for an image in the request, safely saving it if present. Then, it extracts post details from the form, inserts the post into the database, and redirects the user to the homepage.
