@@ -323,6 +323,18 @@ To get the post category shown in the code above from earlier, I implemented a f
 ```
 <img width="1512" alt="Screen Shot 2023-05-08 at 10 49 48 PM" src="https://user-images.githubusercontent.com/111751273/236841551-305958d9-b70d-4682-b678-058f0a419353.png">
 
+### Comment Post Time
+As a part of my client's requirements were for users to be able to post comments, I thought it would be nice for the user to see how long ago they had posted their comment. I was able to solve this by implementing a loop that compares the current time with the time the comment was posted. This was accomplished by defining a function, `how_much_time_ago`, that calculates the time difference between the current time and the post's timestamp. Here is a snippet of the function:
+```.py
+for unit, unit_length in time_units:
+  if time_diff.total_seconds() > unit_length:
+      num_units = int(time_diff.total_seconds() // unit_length)
+      unit = unit if num_units == 1 else unit + 's'  # Handle plural
+      return f"{num_units} {unit} ago"
+```
+This piece of code is a loop that iterates over the defined list `time_units`. Each element of `time_units` consists of a string representation of a time unit ('year', 'month', 'week', 'day', 'hour', 'minute', 'second') and its corresponding length in seconds. The loop checks whether the total seconds of `time_diff` is greater than the current time unit length (I was able to get the current time value by using the Datetime library). If it is, it calculates the number of full units that fit into `time_diff` using integer division `//`. It then checks if the number of units is 1, and if so, it leaves the unit as singular. If not, it adds an 's' to the unit to make it plural. It then returns a string showing the number of units and the time unit itself (like "2 hours ago").
+
+<img width="1281" alt="Screen Shot 2023-05-09 at 5 07 17 PM" src="https://user-images.githubusercontent.com/111751273/237034429-8ea024ba-c34a-4997-9fcb-6442cc6d67d3.png">
 
 ### Edit Post/Comment (Success Criteria: 2)
 While developing this edit post and comment feature, I followed the steps I took to allow users create posts and comments. I was able to meet my client's needs by just creating a new function and query. Editting a post/comment is basically inserting a "new" post/comment into an already existing post/comment. I followed the exact same steps for editting comments and the only differences were the names of variables. For example, here is a code snippet for editting posts:
