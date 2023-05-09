@@ -500,7 +500,7 @@ Through this method, I was able to successfully meet my client's requirement of 
 # Criteria D: Functionality
 ## Video of Web Application Functionality
 https://github.com/jonathanye29/unit4_project/assets/111751273/bc04e8a2-4f23-480b-a19e-ff9e2e77ac97
-
+<a href="https://youtu.be/2mcj87IsiNs">Link to the video on YouTube with captions</a>
 
 # Criteria E: Evaluation
 ## Evaluation by Client
