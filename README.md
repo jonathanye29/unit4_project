@@ -39,7 +39,8 @@ _Word Count_: **491**
 
 # Criteria B: Design
 ## System Diagram
-![jojojojojojo (1)](https://user-images.githubusercontent.com/111751273/237012197-ce8c23c8-a841-45a1-b99c-7ed8808a70c8.png)
+![jojojojojojo (3)](https://user-images.githubusercontent.com/111751273/237041440-084968a9-940f-4fd9-b906-93f07463106a.png)
+
 <i>Fig. 2</i> This is the system diagram for the proposed solution
 
 It serves as a visual representation of the system and its components, and their relationships to each other. As shown above, the web application will be programmed in python, and all information will be stored in the SQLite database. The application will have various inputs from the user, which will then output onto their screen.
@@ -169,6 +170,7 @@ The class shown in the UML Diagram is responsible for handling database interact
 39	|	Code the popular posts filter function	|	Have a functional program that filters posts by the amount of likes they have (most liked to least liked, vice versa)	|	1 hour	|	26/04/2023	|	C
 40	|	Code the tab icon for web application	|	Have a functional program that displays the social networks logo on the tab of the web application	|	30 minutes	|	26/04/2023	|	C
 41	|	Cleaning up the Code	|	Going back and reviewing the code to correctly format and remove unused code 	|	1 hour 30 minutes	|	27/04/2023	|	C
+42 | 
 
 # Criteria C: Development
 
@@ -495,6 +497,9 @@ Through this method, I was able to successfully meet my client's requirement of 
 # Criteria D: Functionality
 
 # Criteria E: Evaluation
+## Evaluation by Client
+
+
 
 # Works cited
 1. “Trending Dreams | Deep Dream Generator.” Deepdreamgenerator.com, 2023, deepdreamgenerator.com/. Accessed 2 Apr. 2023.
