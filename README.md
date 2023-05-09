@@ -569,5 +569,5 @@ Implementing this recommendation would involve extending the existing dropdown m
 <i>Fig A. 4</i> Client evaluation of the web application (Disclaimer: Mailer and recipient names kept confidential for privacy purposes)</i>
 
 <img width="1173" alt="Screen Shot 2023-05-09 at 8 26 44 PM" src="https://github.com/jonathanye29/unit4_project/assets/111751273/b34adf1b-e914-4334-8db4-9bb679d508a6">
-<i>Fig A. 4</i> Peer evaluation of the web application (Disclaimer: Mailer and recipient names kept confidential for privacy purposes)
+<i>Fig A. 5</i> Peer evaluation of the web application (Disclaimer: Mailer and recipient names kept confidential for privacy purposes)
 
