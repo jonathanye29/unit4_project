@@ -170,7 +170,10 @@ The class shown in the UML Diagram is responsible for handling database interact
 39	|	Code the popular posts filter function	|	Have a functional program that filters posts by the amount of likes they have (most liked to least liked, vice versa)	|	1 hour	|	26/04/2023	|	C
 40	|	Code the tab icon for web application	|	Have a functional program that displays the social networks logo on the tab of the web application	|	30 minutes	|	26/04/2023	|	C
 41	|	Cleaning up the Code	|	Going back and reviewing the code to correctly format and remove unused code 	|	1 hour 30 minutes	|	27/04/2023	|	C
-42 | 
+42 | Get Client Evaluation on the Web Application | To have the website evaluated by the client and the subsequent evidence documented | 1 hour | 06/05/2023 | E 
+43 | Get Peer Evaluation on the Web Application | To have the website evaluated by the client and the subsequent evidence documented | 1 hour | 07/05/2023 | E
+44 | Evaluate the recommendations given from both the client and peer | Take in and review the recommendations from both evaluations on how the website can be improved and document them properly | 20 minutes | 07/05/2023 | E 
+
 
 # Criteria C: Development
 
@@ -512,6 +515,22 @@ The client expresses high satisfaction with the developed web application, expre
 ## Evaluation by Peer
 My peer reviewer gave positive feedback on the web application (see Fig A. 5 in <a href="https://github.com/jonathanye29/unit4_project#evidence-of-consultation"> Evidence of Consultation</a> in Appendix), affirming that it successfully meets all the success criteria. They especially appreciated the categorization feature and the user's ability to filter posts by their likes. However, they suggested a potential enhancement in the form of more robust sorting options. Instead of limiting to the most liked and latest posts, the inclusion of additional sorting features such as least liked and oldest posts could provide users with a more comprehensive and nuanced browsing experience. This feedback will be invaluable in further refining the functionality and user experience of the web application.
 
+## Recommendations
+### Recommendation 1: Display Like Counts on Posts
+The client suggested that displaying the number of likes each post has received would be a valuable addition to the platform (see Fig A. 4 in <a href="https://github.com/jonathanye29/unit4_project#evidence-of-consultation"> Evidence of Consultation</a> in Appendix). Displaying the like count on each post can greatly enhance the user experience and the overall sense of community on the platform. It introduces a more immediate and transparent form of user engagement, allowing users to see how their content is received by their peers in real time.
+
+Furthermore, it also introduces a form of social proofing, where posts with higher like counts may encourage other users to engage with the content, fostering a more active discussion and interaction within the platform. It can also incentivize users to post higher quality content, knowing that their posts are being actively liked and acknowledged by their peers.
+
+On a more practical note, the like count can serve as a quick reference for users to determine which posts are trending or most relevant within the community at any given time, thus aiding in navigation and discovery of content on the platform.
+
+To implement this feature, an update to the HTML template and the database query used to retrieve post information can be made. The query should include the like count, and the HTML template should be adjusted to display this information alongside each post.
+
+### Recommendation 2: Expand Sorting Options
+The peer reviewer suggested incorporating more robust sorting options in addition to the existing "most liked" and "latest" filters (see Fig A. 5 in <a href="https://github.com/jonathanye29/unit4_project#evidence-of-consultation"> Evidence of Consultation</a> in Appendix). Expanding the sorting options available to users can significantly enhance their ability to navigate and discover content that is most relevant to their interests. By adding options such as "least liked" and "oldest", users gain more control and flexibility over their browsing experience, allowing them to engage with the platform in a way that best suits their preferences.
+
+For instance, a "least liked" option may bring to light posts that have been overlooked or underappreciated, encouraging a more diverse range of discussions. On the other hand, an "oldest" option could be useful for users wanting to explore the history of discussions within the book club, or for finding older posts that they wish to revisit. Moreover, providing a variety of sorting options encourages repeated engagement, as users can choose to explore the platform's content in different ways each time they visit the web application. 
+
+Implementing this recommendation would involve extending the existing dropdown menu in the HTML template to include these new sorting options. On the server side, the application would need to handle these additional sorting methods, adjusting the SQL query used to retrieve posts based on the user's selected sorting method.
 
 # Works cited
 1. “Trending Dreams | Deep Dream Generator.” Deepdreamgenerator.com, 2023, deepdreamgenerator.com/. Accessed 2 Apr. 2023.
@@ -547,7 +566,8 @@ My peer reviewer gave positive feedback on the web application (see Fig A. 5 in 
 <i>Fig A. 3</i> Client's approval of all the current state of the web applications development after meeting. (Disclaimer: Mailer and recipient names kept confidential for privacy purposes)
 
 <img width="1176" alt="Screen Shot 2023-05-09 at 7 14 27 PM" src="https://github.com/jonathanye29/unit4_project/assets/111751273/cf325c12-ed07-4207-b93a-a3831d8579b3">
-<i>Fig A. 4</i> Client's evaluation of the web application</i>
+<i>Fig A. 4</i> Client evaluation of the web application (Disclaimer: Mailer and recipient names kept confidential for privacy purposes)</i>
 
-
+<img width="1173" alt="Screen Shot 2023-05-09 at 8 26 44 PM" src="https://github.com/jonathanye29/unit4_project/assets/111751273/b34adf1b-e914-4334-8db4-9bb679d508a6">
+<i>Fig A. 4</i> Peer evaluation of the web application (Disclaimer: Mailer and recipient names kept confidential for privacy purposes)
 
