@@ -501,6 +501,8 @@ Through this method, I was able to successfully meet my client's requirement of 
 16. lipis. “Lipis/Flag-Icons: A Curated Collection of All Country Flags in SVG — plus the CSS for Easier Integration.” GitHub, 28 Mar. 2023, github.com/lipis/flag-icons. Accessed 25 Apr. 2023.
 17. Soumitra. “Upload and Display Image Using Python Flask - Roy Tutorials.” Roy Tutorials, 13 Apr. 2020, roytuts.com/upload-and-display-image-using-python-flask/. Accessed 29 Apr. 2023.
 18. “Examples of Web and XML Development Using the DOM - Web APIs | MDN.” Mozilla.org, 20 Feb. 2023, developer.mozilla.org/en US/docs/Web/API/Document_Object_Model/Examples. Accessed 1 May 2023.
+19. knookie. “How to Add a Browser Tab Icon (Favicon) for a Website?” Stack Overflow, 3 Feb. 2011, stackoverflow.com/questions/4888377/how-to-add-a-browser-tab-icon-favicon-for-a-website. Accessed 9 May 2023.
+
 
 # Appendix
 ## Evidence of Consultation
