@@ -50,19 +50,19 @@ It serves as a visual representation of the system and its components, and their
 ![u4flowchart2 (1)](https://user-images.githubusercontent.com/111751273/236667550-dc0668e5-b174-4688-9e57-77e6a044b79c.png)
 <i>Fig. 3</i> This is the flow diagram that details the process of how the posts are created.
 
-This method handles the creation of a new post. It first checks for an image in the request, safely saving it if present. Then, it extracts post details from the form, inserts the post into the database, and redirects the user to the homepage.
+This function handles the creation of a new post. It first checks for an image in the request, safely saving it if present. Then, it extracts post details from the form, inserts the post into the database, and redirects the user to the homepage.
 
 ### Like Post
 ![u4flowchart3](https://user-images.githubusercontent.com/111751273/236672192-9402434f-47ba-456e-90f6-de9736a568d0.png)
 <i>Fig. 4</i> This is the flow diagram that details the process of how users are able to like and unlike posts
 
-This method handles the process of liking or unliking a post. It first decodes the user's token to get their user ID. Then, it checks if a like record exists in the database for the given user and post. If the record exists, it deletes the like (unlike). If not, it creates a new like record. Finally, it redirects the user back to the post.
+This function handles the process of liking or unliking a post. It first decodes the user's token to get their user ID. Then, it checks if a like record exists in the database for the given user and post. If the record exists, it deletes the like (unlike). If not, it creates a new like record. Finally, it redirects the user back to the post.
 
 ### Comment Post Date Feature
+![u4flowchart2](https://user-images.githubusercontent.com/111751273/237029431-8b35138c-460b-4e30-9d4f-3e6d1c18863a.png)
+<i>Fig. 5</i> This is the flow diagram that details the process of how the web application displays how much time ago users posted their comments. This was a feature that my client wants as an addition to the users being able to post comments. 
 
-<i>Fig. 5</i> This is the flow diagram that details the process of how the web application displays how much time ago users posted their comments.
-
-This feature displays how much time ago the user posted their comment. This was a feature that my client wants as an addition to the users being able to post 
+The function basically finds the largest time unit (from a predefined list) that can be used to express a given time difference, and then formats this information as a string. The time units could be anything like seconds, minutes, hours, etc., and they are processed in the order they are found in the `time_units` list.
 
 ## UML Diagram
 ![u4UML (1)](https://user-images.githubusercontent.com/111751273/236996435-2f067243-d3c8-4321-bc14-9fcc704b8220.png)
