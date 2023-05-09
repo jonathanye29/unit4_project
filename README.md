@@ -498,7 +498,14 @@ Through this method, I was able to successfully meet my client's requirement of 
 
 # Criteria E: Evaluation
 ## Evaluation by Client
-
+| Success Criteria   | Met? | Description          |
+|---------------------------------------------------------------|------|------------------------------------------------------------|
+| The platform allows only students from School X to register using their school emails. | Yes  | The registration process of the web application validates emails based on the school domain, ensuring only students can register.    |
+| Users should be able to post posts of different categories such as: Announcements, Book Reviews, and Discussions, and be able to edit/delete their posts and comments. | Yes  | Users have the ability to post, edit, and delete any of their own posts and comments|
+| The platform will allow users to upload images in their posts.   | Yes  | There is an image upload feature incorporated in the create post feature of the web application, allowing users to add visual features to their posts |
+| Users will be able to see all posts they have liked in the past. | Yes  | The web application allows users to see all posts they have liked before in their profile page. |
+| The platform will allow the user to select what kind of posts they would like to view by category.   | Yes  | The platform's navigation bar allows users to view posts by category, making it easier to locate specifc posts. |
+| Implement a filtering feature that allows users to view the top liked posts.  | Yes  | The web application has a filter feature that allows posts to be sorted by 'Top Liked', allowing users to easily discover the most popular content. In addition, the web application by default sorts all posts by the 'Latest'. |
 
 
 # Works cited
