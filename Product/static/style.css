@@ -1,0 +1,16 @@
+.body_log-res{
+    background-image: url("https://ddgimgs-f43e.kxcdn.com/2263803/recgcs_8f083bd060cbd4c994ed4c5834644660bdf057bc.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.body_index{
+    background-color: #DCDCDD;
+}
