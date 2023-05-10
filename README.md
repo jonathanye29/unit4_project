@@ -68,6 +68,7 @@ The function basically finds the largest time unit (from a predefined list) that
 
 ## UML Diagram
 ![u4UML (2)](https://github.com/jonathanye29/unit4_project/assets/111751273/faab4db4-ddbc-4a4c-84e5-3d9d77f0c4fa)
+
 <i>Fig. 6</i> This is the UML diagram for the social network.
 
 The class shown in the UML Diagram is responsible for handling database interactions, such as executing queries, saving changes, and closing the connection.
