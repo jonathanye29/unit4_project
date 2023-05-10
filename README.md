@@ -136,7 +136,7 @@ The class shown in the UML Diagram is responsible for handling database interact
 5	|	Design: Create system diagram  	|	Have a clear idea of the hardware and software requirements for the proposed solution	|	45 minutes	|	13/04/2023	|	B
 6	|	Design: Draw a wire frame and write an explanation of it	|	Have a clear wire frame that accurately represents and describes the application and have a brief explanation	|	30 mins.	|	13/04/2023	|	B
 7	|	Design: Create flow diagrams and write brief explanations for each  	|	Have accurate flow diagrams for different parts of the program with brief explanations	|	1 hour	|	14/04/2023	|	B
-8	|	Design: Draw an ER diagram and write a breif explanation of it|	A clear and organized visual representation of the data structure for the ShelfShare network with a brief explanation	|	45 minutes        	|	14/04/2023	|	B
+8	|	Design: Draw an ER diagram and write a brief explanation of it|	A clear and organized visual representation of the data structure for the ShelfShare network with a brief explanation	|	45 minutes        	|	14/04/2023	|	B
 9	|	Design: Create UML Diagram and write a brief description 	|	Have a clear UML Diagram that accurately shows the different classes and methods used with a brief explanation	|	30 minutes	|	15/04/2023	|	B
 10	|	Design: Write the test plans	|	Procedures that should be taken to test the program and the expected outcome of each test is recorded	|	1 hour	|	17/04/2023	|	B
 11	|	Planning: Follow up meeting with client	|	Present success criteria and development plan to client and get the approval (see Fig A. 2 in <a href="https://github.com/jonathanye29/unit4_project#evidence-of-consultation">Evidence of Consultation</a> in Appendix)|	20 minutes	|	17/04/2023	|	A
@@ -151,7 +151,7 @@ The class shown in the UML Diagram is responsible for handling database interact
 20	|	Development: Code the registration page	|	Have a working page for registration on the website	|	20 minutes	|	17/04/2023	|	C
 21	|	Development: Code the base HTML template	|	Have a base.html template that will be used to extend to all other templates to complete the web application	|	10 minutes	|	17/04/2023	|	C
 22	|	Development: Code the homepage of the web application	|	Have the layout of the homepage completed and on the website	|	20 minutes	|	18/04/2023	|	C
-23	|	Development: Code the page for each post category (Announcements, Reminders, Book Recommendatrions, Book Reviews, Discussions, Reminders)	|	Have the layout for each category page completed and shown on the website 	|	30 minutes	|	18/04/2023	|	C
+23	|	Development: Code the page for each post category (Announcements, Reminders, Book Recommendations, Book Reviews, Discussions, Reminders)	|	Have the layout for each category page completed and shown on the website 	|	30 minutes	|	18/04/2023	|	C
 24	|	Development: Code the button and route functionality for the homepage	|	Each element shown on the homepage redirects to the assigned page (eg. Announcement button goes to Announcement Page)	|	20 minutes	|	18/04/2023	|	C
 25	|	Development: Implement token-based authentication	|	Develop a secure token-based authentication system using JWT for protecting login required routes	|	2 hours	|	19/04/2023	|	C
 26	|	Development: Code the create_post page	|	Have a page that shows the layout of creating a post	|	15 minutes	|	19/04/2023	|	C
@@ -165,17 +165,31 @@ The class shown in the UML Diagram is responsible for handling database interact
 34	|	Development: Code the logout system	|	Have a functional program that allows users to log out of their accounts	|	10 minutes	|	21/04/2023	|	C
 35	|	Development: Code the upload image function	|	Have a functional program that allows the users to upload desired images in their posts	|	1 hour	|	25/04/2023	|	C
 36	|	Planning: Third meeting with client	|	Show the application to the client and to ask for their opinion on the applications current progress	|	15 minutes	|	25/04/2023	|	A
-37	|	Development: Code the country flag displayment	|	Have a functional program that shows the users country flag in their profile	|	1 hour 15 minutes	|	25/04/2023	|	C
+37	|	Development: Code the country flag display feature	|	Have a functional program that shows the users country flag in their profile	|	1 hour 15 minutes	|	25/04/2023	|	C
 38	|	Development: Code the like post function	|	Have a functional program that allows the users to like and unlike posts	|	25 minutes	|	26/04/2023	|	C
 39	|	Development: Code the popular posts filter function	|	Have a functional program that filters posts by the amount of likes they have (most liked to least liked, vice versa)	|	1 hour	|	26/04/2023	|	C
 40	|	Development: Code the tab icon for web application	|	Have a functional program that displays the social networks logo on the tab of the web application	|	30 minutes	|	26/04/2023	|	C
 41	|	Development: Cleaning up the Code	|	Review the code to correctly format and remove unused code 	|	1 hour 30 minutes	|	27/04/2023	|	C
 42 | Implementation: Get Client Evaluation on the Web Application | Have the website evaluated by the client and the subsequent evidence documented | 1 hour | 06/05/2023 | E 
-43 | Beta Testing: Get Peer Evaluation on the Web Application | Have the website evaluated by a peer and the subsequent evidence documented | 1 hour | 07/05/2023 | E
+43 | Implementation: Get Peer Evaluation on the Web Application | Have the website evaluated by a peer and the subsequent evidence documented | 1 hour | 07/05/2023 | E
 44 | Implementation: Evaluate the recommendations given from both the client and peer | Take in and review the recommendations from both evaluations on how the website can be improved and document them properly | 20 minutes | 07/05/2023 | E 
 
 
 # Criteria C: Development
+
+## Existing tools
+|Libraries|
+|---------|
+| Flask 
+| Werkzeug.utils 
+| Functools
+| JWT
+| Dotenv 
+| os
+| Pycountry
+| Datetime
+| SQLite3
+| Passlib
 
 ## List of techniques used
 - Flask Library/Routes
@@ -209,7 +223,7 @@ My client wanted to create a social network platform exclusively for members of 
     <!-- rest of countries in alphabetical order -->
   </select>
 ```
-As the client's bookclub is part of an international school, I thought it would be a nice addition for the students (users) to add what country they are from. I was able to achieve this by creating a dropdown menu in the registration screen, allowing the user to select their country. At first I had trouble finding a way to list all the countries for a dropdown, until I found a github repository that detailed the steps for a dropdown selection for all countries [13]. I was able to implement the country selection feature by creating an HTML `<label>` element to display the text "Country" and associating it with a `<select>` element. The `<select>` element contains a list of `<option>` elements, each representing a country, and allows users to choose one from the list.
+As the client's book club is part of an international school, I thought it would be a nice addition for the students (users) to add what country they are from. I was able to achieve this by creating a dropdown menu in the registration screen, allowing the user to select their country. At first I had trouble finding a way to list all the countries for a dropdown, until I found a github repository that detailed the steps for a dropdown selection for all countries [13]. I was able to implement the country selection feature by creating an HTML `<label>` element to display the text "Country" and associating it with a `<select>` element. The `<select>` element contains a list of `<option>` elements, each representing a country, and allows users to choose one from the list.
 
 <img width="1512" alt="Screen Shot 2023-05-08 at 10 47 51 PM" src="https://user-images.githubusercontent.com/111751273/236841101-bd249c50-93c6-40aa-8448-896ddb03d9e6.png">
 
@@ -251,7 +265,7 @@ In this line, the `user[3] | flag` part utilizes the custom `flag` filter to con
 </p>
 
 ### Token Encryption
-While developing the website for my client, I realized that the website had lacked user authorization. Meaning anyone could access the web application wihtout having to actually register. To solve this I tried using cookies for identification purposes. However, it is essential to make sure that these cookies are protected. Simply assigning a user ID to a session, such as `session['token'] = user_id`, is not a secure practice. This is because a user could easily access their browser's inspector and modify the user ID to gain unauthorized access. Here is an example of an unprotected changeable token:
+While developing the website for my client, I realized that the website had lacked user authorization. Meaning anyone could access the web application without having to actually register. To solve this I tried using cookies for identification purposes. However, it is essential to make sure that these cookies are protected. Simply assigning a user ID to a session, such as `session['token'] = user_id`, is not a secure practice. This is because a user could easily access their browser's inspector and modify the user ID to gain unauthorized access. Here is an example of an unprotected changeable token:
 
 <img width="1068" alt="Screen Shot 2023-05-08 at 6 03 53 PM" src="https://user-images.githubusercontent.com/111751273/236783651-808e1f23-8904-44fc-861e-00e903b90316.png">
 
@@ -329,7 +343,7 @@ This piece of code is a loop that iterates over the defined list `time_units`. E
 <img width="1281" alt="Screen Shot 2023-05-09 at 5 07 17 PM" src="https://user-images.githubusercontent.com/111751273/237034429-8ea024ba-c34a-4997-9fcb-6442cc6d67d3.png">
 
 ### Edit Post/Comment (Success Criteria: 2)
-While developing this edit post and comment feature, I followed the steps I took to allow users create posts and comments. I was able to meet my client's needs by just creating a new function and query. Editting a post/comment is basically inserting a "new" post/comment into an already existing post/comment. I followed the exact same steps for editting comments and the only differences were the names of variables. For example, here is a code snippet for editting posts:
+While developing this edit post and comment feature, I followed the steps I took to allow users create posts and comments. I was able to meet my client's needs by just creating a new function and query. Editing a post/comment is basically inserting a "new" post/comment into an already existing post/comment. I followed the exact same steps for editing comments and the only differences were the names of variables. For example, here is a code snippet for editing posts:
 ```.py
 post = db.search(f"SELECT * FROM posts WHERE id = {post_id}")
 ```
@@ -366,7 +380,7 @@ Within this function, I first establish a connection to the SQLite database "she
 
         
 ### Uploading Images (Success Criteria: 3)
-One of the challenges I had faced was meeting my clien'ts requirement of allowing users to upload images. I did not know how to do that, so I had to reserach different methods. I was able to solve this by learning to how to use Python's Werkzeug library to implement image uploads [17]. The code snippet below demonstrates how I achieved this:
+One of the challenges I had faced was meeting my client's requirement of allowing users to upload images. I did not know how to do that, so I had to research different methods. I was able to solve this by learning how to use Python's Werkzeug library to implement image uploads [17]. The code snippet below demonstrates how I achieved this:
 ```.py
 if 'image' in request.files:
     image = request.files['image']
@@ -384,7 +398,7 @@ The code checks whether an image file was submitted by the user or not. If prese
 As shown in the image above, the upload folder holds all images that have been uploaded by users. The upload folder not only keeps the server's file structure organized but also allows all users of the website to access and view the uploaded images. By storing the images in a centralized location, the web application can easily serve these images to users when they visit the relevant pages or posts.
 
 ### Jinja2 for Past Likes (Success Criteria: 4)
-My client wanted users to be able to see posts they had liked in the past. I was able to fulfill my client's need by using Jinja2. Jinja2 is a templating engine for Python that allows me to generate my client's web applications HTML pages. It enables the incorporation of variables, loops, and conditional statements (if statements) directly into HTML templates, allowing me to create pages that display customized content for each user, such as showing a list of posts they have liked in the past. Here is part of the HTML template code I wrote for allowing users to see their past liked posts:
+My client wanted users to be able to see posts they had liked in the past. I was able to fulfill my client's needs by using Jinja2. Jinja2 is a templating engine for Python that allows me to generate my client's web applications HTML pages. It enables the incorporation of variables, loops, and conditional statements (if statements) directly into HTML templates, allowing me to create pages that display customized content for each user, such as showing a list of posts they have liked in the past. Here is part of the HTML template code I wrote for allowing users to see their past liked posts:
 ```.html
 <h3>Liked Posts:</h3>
   {% if liked_posts %}
@@ -399,7 +413,7 @@ My client wanted users to be able to see posts they had liked in the past. I was
         </div>
   {% endif %}
 ```
-In this HTML template, Jinja2 is used to display the list of thr user's liked posts. The `{% if liked_posts %}` statement checks if there are any liked posts available. If there are, the `{% for post in liked_posts %}` loop goes through each liked post and displays its content within the <!--all users liked posts-->. If there are no liked posts, the `{% else %}` block is executed, displaying a message "You have no liked posts" inside a card element. 
+In this HTML template, Jinja2 is used to display the list of the user's liked posts. The `{% if liked_posts %}` statement checks if there are any liked posts available. If there are, the `{% for post in liked_posts %}` loop goes through each liked post and displays its content within the <!--all users liked posts-->. If there are no liked posts, the `{% else %}` block is executed, displaying a message "You have no liked posts" inside a card element. 
 
 Furthermore, I utilized Jinja2 in a similar manner to display all the posts and comments a user has made on the platform. By iterating through the lists of user posts and comments. This approach satisfies my client's need of allowing users to see their past likes, and on top of that, all their posts and comments.
 
@@ -424,11 +438,11 @@ If a "like" record exists, it means the user has already liked the post, so the 
 
 If a "like" record does not exist, it means the user hasn't liked the post yet, so the code performs a "like" action. Here, the `like_query` variable stores an SQL query that inserts a new "like" record into the "likes" table for the given user and post. The `db.run_save()` function is then called to execute the query and update the database.
 
-This implementation allows users to like and unlike posts, satisfying my client's need.
+This implementation allows users to like and unlike posts, satisfying my client's needs.
 
 
 ### View by Category (Success Criteria: 5)
-As part of my client's needs, they want the user to be able to select what kind of posts they want to see by category. I was able to satisfy this requirement by implementing a navigation bar at the top of the web applications page at all time that show all categories of posts (Announcements, Reminders, Book Reviews, Book Recommendations, and Discussions). Here is a part of the HTML template code that I wrote for the navigation bar:
+As part of my client's needs, they want the user to be able to select what kind of posts they want to see by category. I was able to satisfy this requirement by implementing a navigation bar at the top of the web applications page at all times that shows all categories of posts (Announcements, Reminders, Book Reviews, Book Recommendations, and Discussions). Here is a part of the HTML template code that I wrote for the navigation bar:
 ```.html
 <div class="container-fluid">
   <nav class="navbar navbar-expand-lg navbar-light">
@@ -497,7 +511,7 @@ https://github.com/jonathanye29/unit4_project/assets/111751273/bc04e8a2-4f23-480
 | Users should be able to post posts of different categories such as: Announcements, Book Reviews, and Discussions, and be able to edit/delete their posts and comments. | Yes  | Users have the ability to post, edit, and delete any of their own posts and comments|
 | The platform will allow users to upload images in their posts.   | Yes  | There is an image upload feature incorporated in the create post feature of the web application, allowing users to add visual features to their posts |
 | Users will be able to see all posts they have liked in the past. | Yes  | The web application allows users to see all posts they have liked before in their profile page. |
-| The platform will allow the user to select what kind of posts they would like to view by category.   | Yes  | The platform's navigation bar allows users to view posts by category, making it easier to locate specifc posts. |
+| The platform will allow the user to select what kind of posts they would like to view by category.   | Yes  | The platform's navigation bar allows users to view posts by category, making it easier to locate specific posts. |
 | Implement a filtering feature that allows users to view the top liked posts.  | Yes  | The web application has a filter feature that allows posts to be sorted by 'Top Liked', allowing users to easily discover the most popular content. In addition, the web application by default sorts all posts by the 'Latest'. |
 
 The client expresses high satisfaction with the developed web application, expressing that it effectively addresses all the outlined success criteria (see Fig A. 4 in <a href="https://github.com/jonathanye29/unit4_project#evidence-of-consultation"> Evidence of Consultation</a> in Appendix). During the evaluation, the client offered valuable feedback like suggesting the addition of visible like counts on each post to provide more immediate feedback to the user community. Having the amount of likes shown can allow users to see the difference in the amounts of likes each post has.
@@ -555,9 +569,11 @@ Implementing this recommendation would involve extending the existing dropdown m
 <img width="1158" alt="Screen Shot 2023-05-09 at 5 01 43 AM" src="https://user-images.githubusercontent.com/111751273/236922415-1f344990-3e15-47ac-a345-2d27f86c7706.png">
 <i>Fig A. 3</i> Client's approval of all the current state of the web applications development after meeting. (Disclaimer: Mailer and recipient names kept confidential for privacy purposes)
 
-<img width="1176" alt="Screen Shot 2023-05-09 at 7 14 27 PM" src="https://github.com/jonathanye29/unit4_project/assets/111751273/92a8bf42-a1d6-4436-ab96-125eb579c9a1">
+<img width="1176" alt="Screen Shot 2023-05-09 at 7 14 27 PM" src="https://github.com/jonathanye29/unit4_project/assets/111751273/cf325c12-ed07-4207-b93a-a3831d8579b3">
 <i>Fig A. 4</i> Client evaluation of the web application (Disclaimer: Mailer and recipient names kept confidential for privacy purposes)</i>
 
 <img width="1173" alt="Screen Shot 2023-05-09 at 8 26 44 PM" src="https://github.com/jonathanye29/unit4_project/assets/111751273/b34adf1b-e914-4334-8db4-9bb679d508a6">
 <i>Fig A. 5</i> Peer evaluation of the web application (Disclaimer: Mailer and recipient names kept confidential for privacy purposes)
+
+
 
