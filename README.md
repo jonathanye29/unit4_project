@@ -555,7 +555,7 @@ Implementing this recommendation would involve extending the existing dropdown m
 <img width="1158" alt="Screen Shot 2023-05-09 at 5 01 43 AM" src="https://user-images.githubusercontent.com/111751273/236922415-1f344990-3e15-47ac-a345-2d27f86c7706.png">
 <i>Fig A. 3</i> Client's approval of all the current state of the web applications development after meeting. (Disclaimer: Mailer and recipient names kept confidential for privacy purposes)
 
-<img width="1176" alt="Screen Shot 2023-05-09 at 7 14 27 PM" src="https://github.com/jonathanye29/unit4_project/assets/111751273/cf325c12-ed07-4207-b93a-a3831d8579b3">
+<img width="1176" alt="Screen Shot 2023-05-09 at 7 14 27 PM" src="https://github.com/jonathanye29/unit4_project/assets/111751273/92a8bf42-a1d6-4436-ab96-125eb579c9a1">
 <i>Fig A. 4</i> Client evaluation of the web application (Disclaimer: Mailer and recipient names kept confidential for privacy purposes)</i>
 
 <img width="1173" alt="Screen Shot 2023-05-09 at 8 26 44 PM" src="https://github.com/jonathanye29/unit4_project/assets/111751273/b34adf1b-e914-4334-8db4-9bb679d508a6">
