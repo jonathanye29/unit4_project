@@ -67,8 +67,7 @@ This function handles the process of liking or unliking a post. It first decodes
 The function basically finds the largest time unit (from a predefined list) that can be used to express a given time difference, and then formats this information as a string. The time units could be anything like seconds, minutes, hours, etc., and they are processed in the order they are found in the `time_units` list.
 
 ## UML Diagram
-![u4UML (1)](https://user-images.githubusercontent.com/111751273/236996435-2f067243-d3c8-4321-bc14-9fcc704b8220.png)
-
+![u4UML (2)](https://github.com/jonathanye29/unit4_project/assets/111751273/faab4db4-ddbc-4a4c-84e5-3d9d77f0c4fa)
 <i>Fig. 6</i> This is the UML diagram for the social network.
 
 The class shown in the UML Diagram is responsible for handling database interactions, such as executing queries, saving changes, and closing the connection.
