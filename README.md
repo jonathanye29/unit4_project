@@ -171,25 +171,11 @@ The class shown in the UML Diagram is responsible for handling database interact
 40	|	Development: Code the tab icon for web application	|	Have a functional program that displays the social networks logo on the tab of the web application	|	30 minutes	|	26/04/2023	|	C
 41	|	Development: Cleaning up the Code	|	Review the code to correctly format and remove unused code 	|	1 hour 30 minutes	|	27/04/2023	|	C
 42 | Implementation: Get Client Evaluation on the Web Application | Have the website evaluated by the client and the subsequent evidence documented | 1 hour | 06/05/2023 | E 
-43 | Implementation: Get Peer Evaluation on the Web Application | Have the website evaluated by a peer and the subsequent evidence documented | 1 hour | 07/05/2023 | E
+43 | Beta Testing: Get Peer Evaluation on the Web Application | Have the website evaluated by a peer and the subsequent evidence documented | 1 hour | 07/05/2023 | E
 44 | Implementation: Evaluate the recommendations given from both the client and peer | Take in and review the recommendations from both evaluations on how the website can be improved and document them properly | 20 minutes | 07/05/2023 | E 
 
 
 # Criteria C: Development
-
-## Existing tools
-|Libraries|
-|---------|
-| Flask 
-| Werkzeug.utils 
-| Functools
-| JWT
-| Dotenv 
-| os
-| Pycountry
-| Datetime
-| SQLite3
-| Passlib
 
 ## List of techniques used
 - Flask Library/Routes
