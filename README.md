@@ -534,14 +534,17 @@ Implementing this recommendation would involve extending the existing dropdown m
 9. Simplilearn. “Django vs. Flask: Understanding the Major Differences.” Simplilearn.com, Simplilearn, 4 Feb. 2021, www.simplilearn.com/flask-vs-django-article. Accessed 10 April 2023.
 10. Gomathy, Kavya. "5 Reasons to Use SQLite, the Tiny Giant for Your Next Project." Medium, The Startup, 4 Jan. 2022, https://medium.com/swlh/5-reasons-to-use-sqlite-the-tiny-giant-for-your-next-project-a6bc384b2df4. Accessed April 10, 2023
 11. Yegulalp, Serdar. "Why You Should Use SQLite." InfoWorld, IDG Communications, Inc., 13 Feb. 2019, https://www.infoworld.com/article/3331923/why-you-should-use-sqlite.html. Accessed April 10, 2023
-12. Otto, Mark. “Get Started with Bootstrap.” Getbootstrap.com, 2023, getbootstrap.com/docs/5.3/getting-started/introduction/. Accessed 15 Apr. 2023.
-13. 262588213843476. “HTML Country Select Dropdown List.” Gist, 3 May 2023, gist.github.com/danrovito/977bcb97c9c2dfd3398a. Accessed 20 Apr. 2023.
-14. auth0.com. “JSON Web Tokens - Jwt.io.” Jwt.io, Auth0, 2013, jwt.io/introduction. Accessed April 22 2023.
-15. “Pycountry.” PyPI, 5 Mar. 2022, pypi.org/project/pycountry/. Accessed 8 May 2023.
-16. lipis. “Lipis/Flag-Icons: A Curated Collection of All Country Flags in SVG — plus the CSS for Easier Integration.” GitHub, 28 Mar. 2023, github.com/lipis/flag-icons. Accessed 25 Apr. 2023.
-17. Soumitra. “Upload and Display Image Using Python Flask - Roy Tutorials.” Roy Tutorials, 13 Apr. 2020, roytuts.com/upload-and-display-image-using-python-flask/. Accessed 29 Apr. 2023.
-18. “Examples of Web and XML Development Using the DOM - Web APIs | MDN.” Mozilla.org, 20 Feb. 2023, developer.mozilla.org/en US/docs/Web/API/Document_Object_Model/Examples. Accessed 1 May 2023.
-19. knookie. “How to Add a Browser Tab Icon (Favicon) for a Website?” Stack Overflow, 3 Feb. 2011, stackoverflow.com/questions/4888377/how-to-add-a-browser-tab-icon-favicon-for-a-website. Accessed 9 May 2023.
+12. ChatGPT. OpenAI, 2023, https://openai.com/. Accessed April 12, 2023
+13. Otto, Mark. “Get Started with Bootstrap.” Getbootstrap.com, 2023, getbootstrap.com/docs/5.3/getting-started/introduction/. Accessed 15 Apr. 2023.
+14. 262588213843476. “HTML Country Select Dropdown List.” Gist, 3 May 2023, gist.github.com/danrovito/977bcb97c9c2dfd3398a. Accessed 20 Apr. 2023.
+15. auth0.com. “JSON Web Tokens - Jwt.io.” Jwt.io, Auth0, 2013, jwt.io/introduction. Accessed April 22 2023.
+16. “Pycountry.” PyPI, 5 Mar. 2022, pypi.org/project/pycountry/. Accessed 8 May 2023.
+17. lipis. “Lipis/Flag-Icons: A Curated Collection of All Country Flags in SVG — plus the CSS for Easier Integration.” GitHub, 28 Mar. 2023, github.com/lipis/flag-icons. Accessed 25 Apr. 2023.
+18. Soumitra. “Upload and Display Image Using Python Flask - Roy Tutorials.” Roy Tutorials, 13 Apr. 2020, roytuts.com/upload-and-display-image-using-python-flask/. Accessed 29 Apr. 2023.
+19. “Examples of Web and XML Development Using the DOM - Web APIs | MDN.” Mozilla.org, 20 Feb. 2023, developer.mozilla.org/en US/docs/Web/API/Document_Object_Model/Examples. Accessed 1 May 2023.
+20. knookie. “How to Add a Browser Tab Icon (Favicon) for a Website?” Stack Overflow, 3 Feb. 2011, stackoverflow.com/questions/4888377/how-to-add-a-browser-tab-icon-favicon-for-a-website. Accessed 9 May 2023.
+
+
 
 
 # Appendix
